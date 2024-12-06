@@ -7,13 +7,13 @@ tags: [technical,programming,maths,category-theory,generics]
 katex: True
 ---
 
-Yesterday at work, a friend and I were having a conversation about some funky code he saw in the codebase. The discussion went as follows.
+Yesterday at work, a friend and I were having a conversation about a strange dotnet syntactical feature- something he saw in the codebase that he didn't understand. The discussion went as follows.
 
 **Friend**: *You know I saw this weird syntax in some dotnet code*\
 **Me**: *No way, what did you see*\
 **Friend**: *Well, you know interfaces right?*\
 **Me**: *Yeah*\
-**Friend**: *Well, it was an interface generic- not only that, but it had a modifier **inside** the generic- new or into or some blue text like that*\
+**Friend**: *Well, it was an interface generic, which is strange enough. Then on top of that it had a modifier **inside** the generic- new or into or some blue text like that*\
 **Me**: *Hold on, you don't mean variant generics?*\
 **Friend**: *Well... probably, lol. What's that?*\
 **Me**: *\*inhales\**
