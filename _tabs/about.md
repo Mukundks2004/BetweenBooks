@@ -17,10 +17,6 @@ I went to primary and highschool in southwest Sydney and sat my HSC in 2022. I w
 
 I aim to post about various aspects of the workplace and university, but I'm really not qualified as a guide in any way. I've had my own experiences, so I'll share them. This is where I stand. Some topics I can think of right now include choosing a degree, choosing a university, why I code (and why you should too), and the benefits of teaching (for the teacher). Also, it's my blog so anything else I want haha.
 
-## This Blog is a Time Bomb!
-
-It won't be relevant when I graduate and my Cadetship terminates! I'll change the name, migrate the contents to another blog or just move on. I plan to keep the contents available here forever.
-
 ## Chirpy
 
 Chirpy is the Jekyll theme I used to make this blog. You can find the source code [here](https://github.com/cotes2020/jekyll-theme-chirpy).
