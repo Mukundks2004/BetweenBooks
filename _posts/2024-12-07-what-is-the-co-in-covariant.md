@@ -1,6 +1,6 @@
 ---
 title: What is the 'Co' in 'Covariant' in C#?
-date: 2024-12-07 2:00:00 +1100
+date: 2024-12-07 2:45:00 +1100
 
 categories: [Technical]
 tags: [technical,programming,maths,category-theory,generics]
