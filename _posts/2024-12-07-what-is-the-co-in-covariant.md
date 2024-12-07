@@ -8,11 +8,11 @@ tags: [technical,programming,maths,generics]
 
 Yesterday at work, a friend and I were having a conversation about a strange dotnet syntactical feature- something he saw in the codebase that he didn't understand. The discussion went as follows.
 
-**Friend**: *You know I saw this weird syntax in some dotnet code*\
-**Me**: *No way, what did you see*\
+**Friend**: *You always talk about language quirks, I saw this weird syntax in some dotnet code*\
+**Me**: *Alright, what did you see*\
 **Friend**: *Well, you know interfaces right?*\
 **Me**: *Yeah*\
-**Friend**: *Well, it was an interface generic, which is strange enough. Then on top of that it had a modifier **inside** the generic- new or into or some blue text like that*\
+**Friend**: *Well, it was an interface generic, but those aren't too rare. It was weird because it had a modifier **inside** the generic- new or into or some blue text like that*\
 **Me**: *Hold on, you don't mean variant generics?*\
 **Friend**: *Well... probably, lol. What's that?*\
 **Me**: *\*inhales\**
