@@ -3,11 +3,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-My name is Mukund. At the time of writing, I am a second year Computer Science student at the University of Technology Sydney, and a software cadet. Many times, various people have asked me about Uni and Work related stuff, like the contents of a CS course, what it is like working as a junior dev, juggling work and uni, choosing a university to study at, the list goes on. There comes a point when answering the same questions over and over where you are encouraged to step back and make sure your thoughts are gathered and answers are consistent.
+My name is Mukund. At the time of writing, I am a second year Computer Science student at the University of Technology Sydney, and a software cadet. Many times, people (students, colleagues, family) have asked me about uni and work related stuff, like the contents of a CS course, what it is like working as a junior dev, juggling work and uni, choosing a uni to study at, the list goes on.
 
-## Why a Blog?
-
-I'm trying to find closure after the slaughter that was the Advanced English HSC. I like writing because I focus when I write so I'm not thinking about other things. It is also the time of year when people are preparing for the future like graduates applying for jobs, highschoolers choosing a degree or even other uni students contemplating their courses and subjects. Very reasonably, people are struggling to make decisions. Reddit is a go-to for so many, but a 20 word comment is far from a comprehensive source to base essentially the trajectory of your career off. So maybe people will come here and find some answers? (We need a new punctuation mark which is a question mark, with a hope that the answer is yes)
+I like to answer those questions, but my answers are often long (and the occasion never calls for a verbose response) and I want to be allowed to finish the generative process that's started when someone poses a question. I think it is good to tie these related questions together too, and make sure my thoughts are gathered and my answers are consistent.
 
 ## About Me
 
@@ -17,7 +15,7 @@ I loved maths and participated in lots of fun competitions and events through my
 
 ## What Can You Expect Here?
 
-I aim to post about various aspects of the workplace and university. This is the furthest thing from a guide, but I've had my own experiences and I'll share them. Some topics I can think of right now include choosing a degree, choosing a university, why I code (and why you should too), and the benefits of teaching (for the teacher). But I don't want to be basic, I'll only write if there's something to be said. I have strong and unorthodox opinions on lots of things, but I will definitely stay non-political and generally keep things lighthearted.
+I aim to post about things I know about- uni and work, the media I consume and cool maths things. This is the furthest thing from a guide, but I've had my own experiences and I'll share them. Some topics I can think of right now include choosing a degree, choosing a university, why I code, and the benefits of teaching (for the teacher). But I don't want to be basic, I'll only write if there's something to be said. Although I have strong and sometimes unorthodox opinions on lots of things I will stay non-political and generally keep things lighthearted and SFW.
 
 ## Chirpy
 

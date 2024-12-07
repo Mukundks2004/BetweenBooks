@@ -2,7 +2,7 @@
 title: Why I Love Lana Del Rey
 date: 2024-12-06 9:00:00 +1100
 
-categories: [Misc]
+categories: [Books Film and Music]
 tags: [music,lana-del-rey,philosophy]
 ---
 
