@@ -30,12 +30,6 @@ script_includes:
       </span>
 
       <!-- lastmod date -->
-      {% if page.last_modified_at and page.last_modified_at != page.date %}
-        <span>
-          {{ site.data.locales[lang].post.updated }}
-          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
-        </span>
-      {% endif %}
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
@@ -98,7 +92,6 @@ script_includes:
       </div>
     </div>
   </header>
-
   {% if enable_toc %}
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
       <span class="label text-truncate">{{ page.title }}</span>
