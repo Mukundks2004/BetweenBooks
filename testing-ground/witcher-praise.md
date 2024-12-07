@@ -1,0 +1,3 @@
+# And Then It Was Over??
+
+Readers love to make distinctions between phrasings even when there are none to be made, for no reason other than to be overly pedantic and contrarian. As a reader myself, I must make it known that I consider "The best book ever made", "The best book series ever made", "The best book ever written", "My favourite book" and "The book I enjoyed the most" to be completely different questions. Partially so I can do justice to many books I find worthy of praise and not have to bear the burden of having to making a choice. If you put a gun to my head and insisted the questions were all one and the same, the Witcher would come out on top.
