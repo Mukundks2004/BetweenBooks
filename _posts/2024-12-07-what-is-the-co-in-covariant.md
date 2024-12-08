@@ -32,7 +32,7 @@ When a functor preserves the order of morphisms- that is, any old functor- we ca
 
 ## Definitions Out of the Way, On to Some Programming!
 
-Similar to $$Hask$$, we can construct $$Type$$, the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of all objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`. 
+Similar to $$Hask$$, we can construct $$Type$$, the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`. 
 
 > Side note: technically morphisms aren't present strictly if `A` is a subtype of `B` but rather if a reference of type `B` is able to point to an object of type `A`. Practically, this ends up being the same thing, but makes inheritance chains much less ambiguous. Simply write the code and see if it compiles to check its correctness.
 
@@ -42,7 +42,7 @@ Hold on, we're getting there. It's time to introduce... normal generics. Let's s
 
 Take our faithful `List<T>` from C#. It takes little effort to see that `List<T>` is an endofunctor (a functor from $$Type$$ to $$Type$$) as it sends every `T` to a new type, `List<T>`. 
 
-> Two asides. Firstly, anyone coming from functional programming might recognize the similarity of this observation about the behaviour of `List` to the notion of a subset of type classes in functional programming languages (those that have an fmap), which behave very similarly and by no accident are also called functors. However, we are applying functors to types and not to instances of those types, so it is important to consider these two types of functors separate. Secondly, the classification of `List<T>` as an endofunctor applies to all generics, not just `List`. But we will start simple.
+> Two asides. Firstly, anyone coming from functional programming might recognize the similarity of this observation about the behaviour of `List` and a subset of type classes in functional programming languages (those that have an fmap), which behave very similarly and by no accident are also called functors. However, we are applying functors to types and not to instances of those types, so it is important to consider these two groups of functors separate. Secondly, the classification of `List<T>` as an endofunctor applies to all generics, not just `List`. But we will start simple.
 
 Back to `List`. Our functor is not complete without a rigorous description of what it does to our morphisms- but I want to pose that to you first. How does `List` act on any particular subtype relation?
 
@@ -106,11 +106,11 @@ It starts to make sense when you analyze it logically. `animalAction` depends on
 
 ## Bivariance
 
-The last type of variance is bivariance, a functor that both preserves the original morphism and creates a corresponding and equal but otherwised reversed morphism in the destination category is bivariant. We know covariance can only be established by making our type out-only and contravariance by making our type in-only, so bivariance would need to meet both these conditions, and neither take nor return `T`, ever. And believe it or not, the maths checks out. Such a type would both preserve the morphism from `I<Dog>` to `I<Animal>` and also create a reversed morphism, from `I<Animal>` to `I<Dog>`. In such a bizarre case, the generic isn't even being used (it neither takes nor returns `T`!), making the references interchangeable and thus the distinction totally useless. From a maths perspective, in a partial order, $$a \le b$$ and $$b \le a$$ implies $$a = b$$ (we call this antisymmetry). And so it is, as the types have become equivalent! From a software engineering perspective, I can't imagine ever needing this. Neither can the compiler, it won't let you have both.
+The last type of variance is bivariance, a functor that both preserves an original morphism and creates a corresponding and equal but otherwised reversed morphism in the destination category is bivariant. We know covariance can only be established by making our type out-only and contravariance by making our type in-only, so bivariance would need to meet both these conditions, and neither take nor return `T`, ever. And believe it or not, the maths checks out. Such a type would both preserve the morphism from `I<Dog>` to `I<Animal>` and also create a reversed morphism, from `I<Animal>` to `I<Dog>`. In such a bizarre case, the generic isn't even being used (it neither takes nor returns `T`!), making the references interchangeable and thus the distinction totally useless. From a maths perspective, in a partial order, $$a \le b$$ and $$b \le a$$ implies $$a = b$$ (we call this antisymmetry). And so it is, as the types have become equivalent! From a software engineering perspective, I can't imagine ever needing this. Neither can the compiler as it won't let you have both, so bivariance is more of a theoretical concept.
 
 ## What Next?
 
-Now we know what 'co' and 'contra' actually mean. I hope to write a follow-up extending this analogy in several dimensions. Although I might consult an expert first, because I need to make sure my facts are in order before putting pen to paper. The next entry will explore:
+Now we know what 'co' and 'contra' actually mean. I hope to write a follow-up extending this analogy in several dimensions. The next entry will explore:
 - Multiple generic parameters as bifunctors (especially in ways where they are both covariant and contravariant in different parameters) and then multifunctors
 - The $$Forget$$ adjoint functor which reverses the embedding of a type into a functoral ecosystem by extracting `T`
 - Natural transformations as polymorphic functions that map between generics
