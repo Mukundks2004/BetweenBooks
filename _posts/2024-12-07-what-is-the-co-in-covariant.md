@@ -5,7 +5,7 @@ date: 2024-12-07 2:35:00 +1100
 categories: [Technical]
 tags: [technical,programming,maths,generics]
 image:
-    path: /assets/img/math_background.jpg
+    path: /assets/img/programming_background.jpg
 ---
 
 Yesterday at work, a friend and I were having a conversation about a strange C# syntactic feature- something he saw in the codebase that he didn't understand. The discussion went as follows
