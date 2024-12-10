@@ -4,12 +4,14 @@ date: 2024-12-07 2:35:00 +1100
 
 categories: [Technical]
 tags: [technical,programming,maths,generics]
+image:
+    path: /assets/img/math_background.jpg
 ---
 
-Yesterday at work, a friend and I were having a conversation about a strange C# syntactic feature- something he saw in the codebase that he didn't understand. The discussion went as follows.
+Yesterday at work, a friend and I were having a conversation about a strange C# syntactic feature- something he saw in the codebase that he didn't understand. The discussion went as follows
 
 **Friend**: *You always talk about language quirks, I saw this weird syntax in some dotnet code*\
-**Me**: *Alright, what did you see*\
+**Me**: *Huh, what did you see*\
 **Friend**: *Well, you know interfaces right?*\
 **Me**: *Yeah*\
 **Friend**: *It was an interface generic, but those aren't too rare. It was weird because it had a modifier **inside** the generic- "new" or "into" or some blue text like that*\
@@ -28,7 +30,7 @@ One of the tricky things about learning variance is justifying the 'co' and 'con
 
 A functor $$F$$ is a mapping between categories, $$F: C \to D$$. It assigns each objext $$X$$ in $$C$$ an $$F(X)$$ in $$D$$ and each $$f: X \to Y$$ in $$C$$ an $$F(f): F(X) \to F(Y)$$ in $$D$$. Identity morphisms are preserved over $$F$$ and $$F$$ respects composition of morphisms, that is, composing $$f$$ and $$g$$ and then applying $$F$$ yields the same result as composing $$F(f)$$ and $$F(g)$$.
 
-When a functor preserves the order of morphisms- that is, any old functor- we call it covariant. Functors are covariant by default. Sometimes, a functor behaves in the way described above, but reverses the order of morphisms. We still call this a functor, but assign it the adjective "contravariant" as indication of this special distinction.
+When a functor preserves the direction of morphisms- that is, any old functor- we call it covariant. Functors are covariant by default. Sometimes, a functor behaves in the way described above, but reverses the direction of morphisms. We still call this a functor, but assign it the adjective "contravariant" as indication of this special distinction.
 
 ## Definitions Out of the Way, On to Some Programming!
 
@@ -74,7 +76,7 @@ From this example, it is obvious that generally a morphism from $$A$$ to $$B$$ d
 
 ## Or Is It?
 
-You see, if we consider `List` in a very specific context- the context that it is read-only, it actually does preserve morphisms! The trick is to realize that in its read-only capacity (let's take advantage of the `IEnumerable` interface here, using it as a read-only list), referring to an `IEnumerable<Dog>` as an `IEnumerable<Animal>` merely means we are referring to the result of pulling a `Dog` out of the former and treating it as an `Animal`. This is perfectly valid. In code:
+You see, if we consider `List` in a very specific context- the context where it is read-only, it actually does preserve morphisms! The trick is to realize that in its read-only capacity (let's take advantage of the `IEnumerable` interface here, using it as a read-only list), referring to an `IEnumerable<Dog>` as an `IEnumerable<Animal>` merely means we are referring to the result of pulling a `Dog` out of the former and treating it as an `Animal`. This is perfectly valid. In code:
 
 ```csharp
 class Animal {}
@@ -84,7 +86,7 @@ IEnumerable<Dog> dogs = new List<Dog>();
 IEnumerable<Animal> animals = dogs;
 ```
 
-The above snippet compiles. And in fact, it is widely recognized that `IEnumerable<out T>` is covariant to allow this functionality. Not only is it "out-only" (we can get things out of it but not write to it), but has been marked as such using the `out` modifier, asking the compiler to verify this property to mark the interface as covariant. Now we can understand the full meaning of the word, applying the `IEnumerable<T>` functor to $$Type$$ associates every type with a new one, preserving the morphisms between types after the transformation.
+The above snippet compiles. And in fact, it is widely recognized that `IEnumerable<out T>` is covariant to allow this functionality. Not only is it "out-only" (we can get things out of it but not write to it), but has been marked as such using the `out` modifier, asking the compiler to verify this property to tag the interface as covariant. Now we can understand the full meaning of the word, applying the `IEnumerable<T>` functor to $$Type$$ associates every type with a new one, preserving the morphisms between types after the transformation.
 
 ## And For Completeness, Contravariance?
 
@@ -99,6 +101,8 @@ Action<Dog> dogAction = animalAction;
 ```
 
 We've... reversed the order of morphisms? Reversed the inheritance chain?? Oh god, what have we done! Jeff Goldblum was right all along!
+
+![Just because you can does not mean you should](/assets/img/jeff.png)
 
 ## Calm Down!
 
