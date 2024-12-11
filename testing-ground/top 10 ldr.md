@@ -12,3 +12,17 @@ The Final Cut:
 
 why her ealirer are btetter?
 no longer need to become famous, becomeing famous makes good art
+
+
+why is cherry the best:
+- melody is awesome
+- lyrics are very nice
+- sounds like a story, like the fall of an empire 
+- romantic
+- simple, not catchy (can't wear through it, a tougher kind of music) an acquired taste
+- i don't relate (but i relate to the fantasy)
+
+why is born to die so good:
+- philosophical
+- amazing melody, so catchy
+- delivers an aesthetic

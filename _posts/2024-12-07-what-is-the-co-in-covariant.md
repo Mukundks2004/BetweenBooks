@@ -36,7 +36,7 @@ When a functor preserves the direction of morphisms- that is, any old functor- w
 
 Similar to $$Hask$$, we can construct $$Type$$, the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`. 
 
-> Side note: technically morphisms aren't present strictly if `A` is a subtype of `B` but rather if a reference of type `B` is able to point to an object of type `A`. Practically, this ends up being the same thing, but makes inheritance chains much less ambiguous. Simply write the code and see if it compiles to check its correctness.
+> Side note: technically morphisms aren't present strictly if `A` is a subtype of `B` but rather if a reference of type `B` is able to point to an object of type `A`. Practically, the latter is a generalization of the former since it allows for method group assignment (method groups are typeless), delegate variance, etc.
 
 ## Ok... So What?
 
@@ -44,7 +44,7 @@ Hold on, we're getting there. It's time to introduce... normal generics. Let's s
 
 Take our faithful `List<T>` from C#. It takes little effort to see that `List<T>` is an endofunctor (a functor from $$Type$$ to $$Type$$) as it sends every `T` to a new type, `List<T>`. 
 
-> Two asides. Firstly, anyone coming from functional programming might recognize the similarity of this observation about the behaviour of `List` and a subset of type classes in functional programming languages (those that have an fmap), which behave very similarly and by no accident are also called functors. However, we are applying functors to types and not to instances of those types, so it is important to consider these two groups of functors separate. Secondly, the classification of `List<T>` as an endofunctor applies to all generics, not just `List`. But we will start simple.
+> Two asides. Firstly, anyone coming from functional programming might recognize the similarity between `List` under this classification and a subset of type classes in functional programming languages (those that have an fmap), which by no accident are also called (endo)functors. However, the functional functors operate on $$Hask$$, not $$Type$$, so it is important to consider these two groups of functors separate. Secondly, the classification of `List<T>` as an endofunctor applies to all generics, not just `List`. You can actuallt adjust your frame of reference to treat delegates, arrays and even returns as functors, as they all apply some sort of *transformation* to $$Type$$. They all support variance, based on the nature of this transformation. If this sounds crazy, read the rest of the article and come back to this.
 
 Back to `List`. Our functor is not complete without a rigorous description of what it does to our morphisms- but I want to pose that to you first. How does `List` act on any particular subtype relation?
 
