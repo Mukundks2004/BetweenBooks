@@ -28,13 +28,13 @@ One of the tricky things about learning variance is justifying the 'co' and 'con
 
 > This little foray is inspired by functional programming, but the terms I use here aren't coincident with their meanings in the context of Haskell or Idris. This is also not a maths lesson, nor is it a beginner's guide. I assume some familiarity with maths and C#.
 
-A functor $$F$$ is a mapping between categories, $$F: C \to D$$. It assigns each objext $$X$$ in $$C$$ an $$F(X)$$ in $$D$$ and each $$f: X \to Y$$ in $$C$$ an $$F(f): F(X) \to F(Y)$$ in $$D$$. Identity morphisms are preserved over $$F$$ and $$F$$ respects composition of morphisms, that is, composing $$f$$ and $$g$$ and then applying $$F$$ yields the same result as composing $$F(f)$$ and $$F(g)$$.
+A functor $$F$$ is a mapping between categories, $$F: C \to D$$. It assigns each objext $$X$$ in $$C$$ an $$F(X)$$ in $$D$$ and each $$f: X \to Y$$ in $$C$$ an $$F(f): F(X) \to F(Y)$$ in $$D$$. Identity morphisms are preserved under $$F$$ and $$F$$ respects composition of morphisms, that is, composing $$f$$ and $$g$$ and then applying $$F$$ yields the same result as composing $$F(f)$$ and $$F(g)$$.
 
-When a functor preserves the direction of morphisms- that is, any old functor- we call it covariant. Functors are covariant by default. Sometimes, a functor behaves in the way described above, but reverses the direction of morphisms. We still call this a functor, but assign it the adjective "contravariant" as indication of this special distinction.
+When a functor preserves the direction of morphisms- that is, any old functor- we call it covariant. Functors are covariant by default. Sometimes, a functor behaves in the way described above, except for the fact that it reverses the direction of morphisms. We still call this a functor, but assign it the adjective "contravariant" as indication of this special distinction.
 
 ## Definitions Out of the Way, On to Some Programming!
 
-Similar to $$Hask$$, we can construct $$Type$$, the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`. 
+Similar to $$Hask$$, we can construct $$Type$$, the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`.
 
 > Side note: technically morphisms aren't present strictly if `A` is a subtype of `B` but rather if a reference of type `B` is able to point to an object of type `A`. Practically, the latter is a generalization of the former since it allows for method group assignment (method groups are typeless), delegate variance, etc.
 
@@ -44,7 +44,7 @@ Hold on, we're getting there. It's time to introduce... normal generics. Let's s
 
 Take our faithful `List<T>` from C#. It takes little effort to see that `List<T>` is an endofunctor (a functor from $$Type$$ to $$Type$$) as it sends every `T` to a new type, `List<T>`. 
 
-> Two asides. Firstly, anyone coming from functional programming might recognize the similarity between `List` under this classification and a subset of type classes in functional programming languages (those that have an fmap), which by no accident are also called (endo)functors. However, the functional functors operate on $$Hask$$, not $$Type$$, so it is important to consider these two groups of functors separate. Secondly, the classification of `List<T>` as an endofunctor applies to all generics, not just `List`. You can actuallt adjust your frame of reference to treat delegates, arrays and even returns as functors, as they all apply some sort of *transformation* to $$Type$$. They all support variance, based on the nature of this transformation. If this sounds crazy, read the rest of the article and come back to this.
+> Two asides. Firstly, anyone coming from functional programming might recognize the similarity between `List` under this classification and a subset of type classes in functional programming languages (those that have an fmap), which by no accident are also called (endo)functors. However, the functional functors operate on $$Hask$$, not $$Type$$, so it is important to consider these two groups of functors separate. Secondly, the classification of `List<T>` as an endofunctor applies to all generics, not just `List`. You can actually adjust your frame of reference to treat delegates, arrays and even returns as functors, as they all apply some sort of *transformation* to $$Type$$. They all support variance, based on the nature of this transformation.
 
 Back to `List`. Our functor is not complete without a rigorous description of what it does to our morphisms- but I want to pose that to you first. How does `List` act on any particular subtype relation?
 
@@ -64,10 +64,10 @@ Simple code, 4 lines. Will it compile?
 
 **NO!**
 
-The problem is, we are referring to a `List` of `Dog`s as a `List` of `Animal`s, allowing us to call a method belonging to `List<Animal>`, such as a harmless `Add`. But `List<Dog>` is *NOT* a subtype of `List<Animal>`, it can't do the things `List<Animal>` can! For instance, `List<Dog>` cannot accept a `Cat`!
+The problem is we are referring to a `List` of `Dog`s as a `List` of `Animal`s, allowing us to call a method belonging to `List<Animal>` (such as a harmless `Add`) on our `dogs` object. But `List<Dog>` is *NOT* a subtype of `List<Animal>`, it can't do the things `List<Animal>` can! For instance, `List<Dog>` cannot accept a `Cat`!
 
 ```csharp
-animals.Add(new Cat()); // If the code above compiled this would be allowed, but it is unsafe!
+animals.Add(new Cat()); // If the code above compiled this would be allowed!
 ```
 
 We just added a `Cat` to a `List<Dog>`!
@@ -106,7 +106,7 @@ We've... reversed the order of morphisms? Reversed the inheritance chain?? Oh go
 
 ## Calm Down!
 
-It starts to make sense when you analyze it logically. `animalAction` depends on an `Animal`. By pointing to it using a reference of type `Action<Dog>` you are simply promising that if you ever invoke it, you will provide it with a `Dog`, an acceptable substitute for an `Animal`. Now the definition of morphisms existing "if a reference of type `B` is able to point to an object of type `A`" makes more sense. Of course, all this breaks down if `Action` is able to return `T` too, but thankfully that won't happen soon. And if it does, the compiler will be the first to complain!
+It starts to make sense when you analyze it logically. `animalAction` depends on an `Animal`. By pointing to it using a reference of type `Action<Dog>` you are simply promising that if you ever invoke it, you will provide it with a `Dog`, an acceptable substitute for an `Animal`. Now the definition of morphisms existing "if a reference of type `B` is able to point to an object of type `A`" makes more sense. Of course, all of this breaks down if `Action` is able to return `T` too, but thankfully that won't happen soon. And if it does, the compiler will be the first to complain!
 
 ## Bivariance
 
