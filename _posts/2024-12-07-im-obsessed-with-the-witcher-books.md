@@ -3,7 +3,7 @@ title: I'm Obsessed With The Witcher Books
 date: 2024-12-08 14:00:00 +1100
 
 categories: [Books Film and Music]
-tags: [witcher,review]
+tags: [witcher,review,book]
 image:
     path: /assets/img/witcher_background.jpg
 ---

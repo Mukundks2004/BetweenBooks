@@ -3,7 +3,7 @@ title: What is the 'Co' in 'Covariant' in C#?
 date: 2024-12-07 2:35:00 +1100
 
 categories: [Technical]
-tags: [technical,programming,maths,generics]
+tags: [technical,programming,maths,generics,variance,category-theory]
 image:
     path: /assets/img/programming_background.jpg
 ---
@@ -90,7 +90,7 @@ The above snippet compiles. And in fact, it is widely recognized that `IEnumerab
 
 ## And For Completeness, Contravariance?
 
-I'm glad you asked, because this example is a little mind-bendy. A well-known contravariant generic is the `Action<T>` delegate, which accepts a `T` but does not return one.
+I'm glad you asked, because this example is a little mind-bendy. A well-known contravariant generic is the `Action<in T>` delegate, which accepts a `T` but does not return one. Note the use of the `in` keyword to denote contravariance.
 
 ```csharp
 class Animal {}

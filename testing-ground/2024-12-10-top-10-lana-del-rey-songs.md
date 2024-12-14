@@ -3,7 +3,9 @@ title: Top 10 Lana Del Rey Songs
 date: 2024-12-10 20:00:00 +1100
 
 categories: [Books Film and Music]
-tags: [lanadelrey,ranking]
+tags: [lana-del-rey,ranking]
+image:
+    path: /assets/img/lana_del_rey_background.jpg
 ---
 
 I know a LOT about Lana Del Rey.
@@ -24,7 +26,7 @@ This list will *not* include *Say Yes to Heaven* (which has grown super popular 
 *Don't say you need me when, you leave and you leave again, I'm stronger than all my men- except for you.*
 
 # 7. Dark Paradise
-*And there's no remedy for memory your face is like a memory, it won't leave my head*
+*And there's no remedy for memory your face is like a melody, it won't leave my head*
 
 # 6. Summertime Sadness (Yes, That One)
 *I'm feeling electric tonight cruising down the coast going bout '99, got my bad baby by my heavenly side, I know if I go I'll die happy tonight*
@@ -70,6 +72,8 @@ Over the country club- sweet melody
 gods and monsters
 art deco
 Go go dancer
+Off to the races
+- if i didnt care about me so much this would be up there, the imagery is good.
 
 Freak
 Lolita
