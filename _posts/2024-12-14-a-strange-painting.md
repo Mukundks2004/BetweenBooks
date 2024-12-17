@@ -2,7 +2,7 @@
 title: A Strange Painting
 date: 2024-12-14 23:00:00 +1100
 
-categories: [misc]
+categories: [Misc]
 tags: [philosophy,ramble,tree,painting]
 image:
     path: /assets/img/nightmare_tree_background.jpg
@@ -12,7 +12,7 @@ This painting is just really weird and really cool. I will ramble a bit about it
 
 I found this painting on Reddit. It was an entry in a collection of works by a Polish artist whose name I forgot but I feel like I could never forget this. The collection wasn't all that unusual. I'm not sure if the genre has a name but it is characterized by lots of reds, a surrealist unrealism and a general dystopian vibe. There are never any people and it's always dark and scary. War, or war imagery makes a frequent appearance. If we're lucky we are treated to some cosmic horror. If I'm able to so simple define such a huge class of art that the collection falls within, why is this picture any special?
 
-# It's So... Eerie
+## It's So... Eerie
 
 Pretty is definitely the wrong word for it, but it does a good job capturing the feeling I get when I look at it. Captivating, enraptured, entranced. Aesthetically pleasing, if the metric for pleasing was all fucked up. But I love it and I could sustain myself off the energy it gives off like a fungus feeding on the radioactive decay in a basement in Chernobyl.
 
@@ -22,7 +22,7 @@ Once I saw a post on the internet asking if it were possible to "calculate 10000
 
 Yes the plane is big as the number was big. The plane is even bigger! And still, when we describe the plane we can't help but spend half our description on this so helplessly *finite* tree, because it's the interesting part. It's the part that matters, from which we can deduce all the other properties of reality in the universe.
 
-# Imprisonment
+## Imprisonment
 
 I can imagine being imprisoned on this planet. It almost seems like a punishment the Greek gods would inflict on a sinner, but somehow greater and more terrible. Just imagine: eternally wandering the plane. A bad dream, but not a nightmare- which is incidentally what the painting is called. *Nightmare Tree*. The tree never grows or tires. And you never grow old or hungry, it never grows or sheds leaves or bark. Just you and the tree and the two moons in the sky you'll never reach, as real as the clouds painted on the edge of the soundstage, beyond the ocean that Truman can never cross.
 
@@ -44,13 +44,13 @@ Maybe rocks are too generous, let me take them away. So you will cling onto the 
 
 You can walk, but you end up back at the tree. Just like how Coraline's other world is centered around the other mothers house and the world is an illusion.
 
-# Or Maybe The Manifold is Globally Euclidean
+## Or Maybe The Manifold is Globally Euclidean
 
 In which case you walk for days, weeks, months, years and your limbs never fatigure and you never need to sleep and you don't feel hungry or happy or horny ever. And you lose track of the tree, but in the infiniteness of time you always find it, always. The landscape never changes, and the only thing you have to go back to is your tree, your spawnpoint. It is the only thing that is. You can jump a little more than knee-high and the ground is too tough to dig through. So you have both an upper and lower bound on how far you can vary along the y-axis from the origin. You can walk or run, or anything in between to get from A to B.
 
 Better than the void? Somehow it feels worse. Like giving you the bare minimum you need to not go insane, to keep your mind as locked up as your body.
 
-# The Soundtrack
+## The Soundtrack
 
 I imagine white noise plays forever and always, it never gets louder and you never acclimatise. It's enough to stop you from hearing the blood rushing in your ears. I like to think a deep rumbling accompanies the trebles, you get used to it quickly but it's not something you can't notice when you try. 
 
@@ -58,12 +58,12 @@ And a feeling deep in your gut says that there are no living creatures on this w
 
 This is the place you go to when you die.
 
-# The Question
+## The Question
 
 It's really hard to devote your life to something, because we humans aren't really like that, we like seeking new challenges and yearn for stimulation. It's something else entirely to give up everything in exchange for that one thing. Like a monk in a remote cave, but even they commit to their meditation with the assumption that death is a certainty, that their study is finite.
 
 The task is to find something that makes an existence on the plane an object of desire. Can you see yourself giving up your life. Giving up *life itself*, to be transported to this world, to focus purely on an art? To be clear, you will not recieve any praise, and certainly there is no prestige for such a sacrifice. It is all about you *creating* the field and advancing it, single-handedly, on your own. For the sake of itself.
 
-# Why I Like the Painting, a TLDR
+## Why I Like the Painting, a TLDR
 
 It makes me think about the essence of what I live for. When I see the desolate landscape I think, "what do I love so much that I would gladly take an eternity on the plane as an opportunity to think about that thing". And I am yet to find an answer.
