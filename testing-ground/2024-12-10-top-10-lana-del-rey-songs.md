@@ -74,6 +74,7 @@ art deco
 Go go dancer
 Off to the races
 - if i didnt care about me so much this would be up there, the imagery is good.
+this is what makes us girls
 
 Freak
 Lolita
@@ -83,7 +84,6 @@ Sad Girl
 Diet mountain dew
 national anthem
 carmen
-this is what makes us girls
 cola
 body electric
 
