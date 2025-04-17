@@ -98,6 +98,10 @@ I consider this Discrete's annoying little brother. The content featured in this
 
 I am strongly of the opinion that the subjects that are the most value are not the easy ones (of course not), or the technical ones (you can learn that on your own), or the hard ones (again, on your own) but a rare combination of practical and experience-oriented subjects that you just cannot learn to do "the right way" at home with a laptop. Arch is one of those.
 
+In Arch you learn the big buzzwords that people toss around like "Data Lake" and "SaaS". These mean real things and it is important how they integrate into real enterprise solutions, because at work I've learnt you can never have an application- even one as simple as a scheduled task script- without thinking about how it will have to interact with users and services in the long term.
+
+Despite its praise, I found the subject poorly structured and delivered. Neither the lecturer not tutor were particularly engaged, and its hard to find beauty in architecture the way people find beauty in philosophy or math.
+
 
 Stupid, needs to be in person. maybe bad wrap.
 
