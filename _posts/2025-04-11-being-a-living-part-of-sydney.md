@@ -13,7 +13,7 @@ image:
 
 ## What is Sydney?
 
-Any question phrased so succinctly and trivially cannot conceivably have a definitive, concise answer. The question demands to be explored in depth, it demands the answerer reference Australia's aboriginal heritage, its colonial history, demographics and migration patterns, socio-cultural evolution, economic state, political partition, geographical boundaries and countless other subjective ways of defining a city. In this post I want to talk about how Sydney is its population- and more precisely, how insignificant individuals have a very *felt* precense in a city of millions.
+Any question phrased so succinctly and trivially cannot conceivably have a definitive, concise answer. The question demands to be explored in depth, it demands the answerer reference Australia's aboriginal heritage, its colonial history, demographics and migration patterns, socio-cultural evolution, economic state, political partition, geographical boundaries and countless other subjective ways of defining a city. In this post I want to talk about how Sydney is its population- and more precisely, how insignificant individuals have a very *felt* presence in a city of millions.
 
 ## People make a place
 
