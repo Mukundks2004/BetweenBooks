@@ -3,7 +3,7 @@ title: Ranking My Subjects
 date: 2024-12-18 17:00:00 +1100
 
 categories: [University]
-tags: [subjects,university,ranking,review,programming,maths,sql,python,java,networks,linux,software,algorithms,computers,dotnet,interaction-design,business-requirements-modelling,database]
+tags: [subjects,university,ranking,review,programming,maths,sql,python,java,networks,linux,software,algorithms,computers,dotnet,interaction-design,business-requirements-modelling,database,application-development]
 image:
     path: /assets/img/studying_background.png
 ---
