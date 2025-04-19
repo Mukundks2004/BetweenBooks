@@ -3,7 +3,7 @@ title: Being a Living Part of Sydney
 date: 2025-04-11 16:00:00 +1000
 
 categories: [Misc]
-tags: [society,culture,society-and-culture,sydney,misc]
+tags: [society,culture,society-and-culture,sydney,maccas]
 image:
     path: /assets/img/qvb_maccas_background.png
 ---

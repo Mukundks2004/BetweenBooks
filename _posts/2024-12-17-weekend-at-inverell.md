@@ -1,8 +1,9 @@
 ---
 title: Weekend At Inverell
 date: 2024-12-17 19:00:00 +1100
+
 categories: [Misc]
-tags: [travel,inverell]
+tags: [travel,inverell,short-story,funny,fiction]
 image:
     path: /assets/img/inverell_background.jpg
 ---
