@@ -3,7 +3,7 @@ title: A Strange Painting
 date: 2024-12-14 23:00:00 +1100
 
 categories: [Misc]
-tags: [philosophy,ramble,tree,painting]
+tags: [philosophy,ramble,tree,painting,eerie,reflection]
 image:
     path: /assets/img/nightmare_tree_background.jpg
 ---

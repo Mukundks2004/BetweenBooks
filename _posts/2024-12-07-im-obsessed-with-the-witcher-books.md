@@ -3,7 +3,7 @@ title: I'm Obsessed With The Witcher Books
 date: 2024-12-08 14:00:00 +1100
 
 categories: [Books Film and Music]
-tags: [witcher,review,book]
+tags: [witcher,review,book,geralt-of-rivia,sapkowski]
 image:
     path: /assets/img/witcher_background.jpg
 ---
