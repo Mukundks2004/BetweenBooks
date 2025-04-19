@@ -13,12 +13,13 @@ A characteristic feature of being an IDeA cadet that is both good and bad is the
 ## The Critera
 
 Rankings will be based on one thing, how much I enjoyed the subject. It is ultimately a nebulous and subjective metric but I will reveal it is composed of:
-- How much I learnt (more learning = better)
+- How inaccessible the subject matter is to someone trying to learn it themselves vs how easy it is made (the ratio)
+- How much I learnt (more learning = better) + how important I found it
+- How well it was taught- points for both the tutor and lecturer
 - How fun it was
 - How hard it is (harder = better, although I have a big ego and I'll never admit anything was hard)
-- How well it was taught- points for both the tutor and lecturer
 
-Edit (18/04/2025): I'm coming back to publish this, and I think one more really important piece of information is like a "top 3 takeaways", it really grounds the rest of the evaluation in something concrete. At the end of the day, we come to uni to learn. I also want to say that one way you can think of this classification is how I would select nodes in my skilltree to expand to if I had to start comp sci again, or train up a mentee. After having completed the ranking I can reasonably safely say that if you gave me X points to spend I would spend it on the top X subjects on this list.
+Edit (18/04/2025): I'm coming back to publish this, and I think one more really important piece of information is a "top 3 takeaways", it really grounds the rest of the evaluation in something concrete. At the end of the day, we come to uni to learn. I also want to say that one way you can think of this classification is how I would select nodes in my skilltree to expand to if I had to start comp sci again, or train up a mentee. After having completed the ranking I can reasonably safely say that if you gave me X points to spend on learning skills I would spend it on the top X subjects on this list.
 
 Unlike my Lana Del Rey ranking, we'll start at the best and work our way down. Without further ado, I present a list of all first and second year IDeA cadet subjects ranked!
 
