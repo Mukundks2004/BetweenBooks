@@ -1,0 +1,47 @@
+---
+title: A Hypothetical New Mathematical Field
+date: 2025-09-02 17:00:00 +1100
+
+categories: [Technical]
+tags: [math,hott,computer-science,programming,dsa,dijkstra,time-complexity,optimization]
+image:
+    path: /assets/img/homotopy_background.png
+---
+
+I am not a mathematicianby trade but I have always enjoyed it as a hobby, and for the longest time have wanted to invent my own math. The way inventing new math typically goes is someone works their way to the edge of human knowledge through the years of reasearch and study undergone during a masters degree and finally pushes that boundary back slightly with a PhD. I've long since stopped entertaining the thought that I would ever be able to invent new math. That hasn't stopped me from fantasizing about it. So, I would like to present a field of math I can see myself discovering in an alternative reality, out there somewhere. 
+
+## Background and Motivation
+
+In computer science, perhaps the most famous algorithm studied by all undergraduate students is Dikstra's algorithm. Named after scientist Edsger Dijkstra, it is a shockingly simple solution to the Single Source Shortest Path (SSSP) problem prevalent in the real world.
+
+Algorithms can be measured and compared using a method call complexity analysis. The resources an algorithm can use are time and memory (space) so we have time complexity and space complexity correspondingly. These measures do not have a standard unit e.g. metres or seconds. Complexity is determined by how the running time/space scales relative to the size of the input. If running time scales linearly relative to input size, we call it 'linear time'. If output scales quadratically realtive to input we call the algorithmic complexity 'quadratic'. If output is constant relative to input time we call it constant time. I imagine it is more 'accurate' to measure algorithmic efficiency by counting discrete steps or instructions- perhaps modelled by an algebraic object, rather than this imprecise notion of 'complexity'. But we’ll stay with time complexity for now. Returning to Dijkstra- strange news was doing rounds on linkedin only a few months ago. This longstanding giant was beaten! A new algorithm, also solving SSSP, was published with a lower time complexity.
+
+For $$m$$ edges and $$n$$ vertices, instead of Dijkstra's $$O(m + n * log(n))$$, the new algorithm has $$O(m * log^{\frac{2}{3}}(n))$$. You can read the details of the implementation [here](https://arxiv.org/abs/2504.17033). It remains to be seen: since both algorithms solve the same problem but one is "better", is this the *most* optimal algorithm or "best" algorithm that can exist ever? Can we do better?
+
+Here is a simpler example of an algorithm to optimize, with a definitive answer. Say you have a nonempty unsorted list of numbers. The task: to identify and return the largest number in the list. There is no way to do this apart from searching through the list linearly and keeping the maximum number saved in memory. This is just common sense. Although I can write less efficient algorithms with redundant steps, like comparing every element to every other element and then doing a binary elimination. The linear search will never be beaten; it is the algorithmic equivalent of a straight line. The question we are interested in is "what is required to prove this?" and more broadly "how can this be derived?"
+
+Unfortunately it is a trivial consequence of Rice's theorem, which tells us that any non-trivial semantic property of a Turing Machine is undecidable, that no algorithm can ever tell is if another algorithm is optimal. A more in depth explanation can be found [here](https://mathoverflow.net/questions/381795/algorithmically-decide-if-an-algorithm-has-optimal-time-complexity). It seems a shame that such a promising, novel posit is quashed so mercilessly before it even got the chance to be explored. Let us pretend that the argument we just made were not the case and provide it this chance anyway. This is how I would go about exploring the problem.
+
+![dijkstra](/assets/img/dijkstra.jpg)
+
+## Basics of Optimization
+
+In highschool we study calculus and learn that a function of a variable that varies continuously, e.g. $$f(x) = x^2 + 12x + 38$$, can be optimized to find a single, concrete, provably minimum value for $$x$$. Even though for a student that has not learnt calculus yet, the task of “optimization” may sound incredibly difficult as $$x$$ can be any value on the continuum- there are uncountably many options. It is easy to see how this could seem impossible. And yet for anyone that has completed highschool mathematics, it is trivial.
+
+Then students may go on to study physics and learn that there is this concept of a functional- a way to assign a numeric quantity to a function such that we can extremize not a single function but a family of functions. For example, finding the function with the shortest path from the point $$(0, 0)$$ to the point $$(1, 0)$$ on the cartesian plane. 
+
+$$C([0, 1])$$, which is the set of all continuous functions on the interval $$[0, 1]$$ ($$f: [0, 1] \to \mathbb{R}$$), is the broadest set of functions we will consider. Of those, take the ones that satisfy the boundary conditions $$f(0) = f(1) = 0$$ as candidates. We can use the calculus of variations- beltrami identity/euler lagrange equation, to find the exact unique function we are interested in- and to prove it is a straight line. 
+
+What’s to stop us from taking a similar approach with algorithms, such as Dijkstra’s?
+
+![optimization](/assets/img/optimization.png)
+
+## My Proposition- Algorithmic Type Theory
+
+SSSP can be formally defined. While there may be better preexisting mathematical frameworks suited for formally encoding constraints, type theory is an excellent starting point. Using techniques developed in HoTT and other fields connected to formal verification, we can define our data structures in a way that guarantees their properties e.g. a proof that a graph is connected is a type, a connected graph is its own type, a proof that a list is sorted is a type etc. We can create and pass around terms of these types, and we can create and pass around types that encode that functions or operations on data structures affect those data structures in measurable, formally verifiable ways. For (a simple) example, rather than adding an element to the end of a vector, we can add an element to the end of a vector and track the length as part of the type- a compile time constant that we can use in proofs rather than an unknown runtime quantity that may result in is performing an undefined operation on a data structure like popping an empty stack. These mistakes are the next generation of null pointer exceptions- if you have the technology, which we do, we should write our code to contain stronger compile time guarantees, the same way modern C# code never runs into `NullReferenceException` at runtime.
+ 
+It is possible for us to define the requirements of an SSSP algorithm- that is, any algorithm that satisfies the SSSP contract, formally, as a type. Then any algorithm such as Dijkstra’s or Bellman-Ford that meets the requirements of SSSP is a term of that type. While these algorithms vary, for example Bellman-Ford has the additional benefit of working on graphs with negative weights, the formal contract wouldn't require it so both algorithms would be interchangeable terms of the type. The HoTT interpretation is that the formal contract is a type, which is a space and each algorithm is a point in that space, between which there can be paths representing equalities. That way if an algorithm has the steps "swap $a$ and $b$" and another has "swap $b$ and $a$" at a different point, yet it does not affect the functioning of the algorithm and the contract is still met, the natural symmetry of the two algorithms would be accounted for as a path between them in the space of interest, representing an equality.
+
+There are a few interesting realizations to be had here- firstly that two algorithms that do exactly the same thing are actually connected. Many small steps can be made to transform one algorithm into the other. This transformation or "homotopy equivalence" is the foundation of the field of Homotopy when applied to spaces. And now we are doing the same to algorithms. Secondly, the idea that when adding an instruction to an algorithm, we change the algorithm not in a discrete way by a finite amount but in a continuous way by a nonstandard, infinitesmal amount. Another way of thinking about this is that addition of successive instructions can be thought of as successive compositions of generators of a lie algebra. Treating algorithms as continuous instead of discrete should allow calculus to be introduced, which finally gives us a foundation to optimize mechanically. Exactly what form such an algorithm will be represented in in order to be algebraically manipulated is not yet known by me- nor is the exact method of calculus that will be used.
+
+I'm coining this imaginary field "Algorithmic Type Theory". While it was doomed from the start, I think these sorts of exercises and thought experiments have value across multiple levels. It is fun to think about, it is educational and realistic that known mathematical theories are rediscovered, and who knows- fooling around always has the potential to prompt a discovery, it has happened before and it will happen again.
