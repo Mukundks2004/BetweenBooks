@@ -5,7 +5,7 @@ date: 2025-01-31 13:30:00 +1100
 categories: [Books Film and Music]
 tags: [maths,review,set-theory,book,halmos,pedagogy]
 image:
-    path: /assets/img/proof_one_plus_one.png
+    path: /assets/img/principia.png
 ---
 
 Recently my grandparents visited from overseas, and they brought with them a treasure trove of literary and mathematical wonders. The thinnest and most approachable of these was the humble but classic *Set Theory* by Paul R Halmos.
