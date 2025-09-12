@@ -56,7 +56,7 @@ I feel like of the three disciplines, software for robotics- and I mean the soft
 
 Mechatronics software starts out with just Python and C++- both basic programming languages that I am no stranger to. But it quickly evolved to programming on STM boards, which was in C and assembly and involved flashing the board with firmware manually and looking at device specs and pinouts. Then I had to dual boot Ubuntu and refamiliarize myself with the Linux environment to set up ROS, the robot OS. And I spent most of my time here- learning how to use workspaces and nodes, how ROS is selective between client-server and publisher-subscriber models, how ros2-control works, moveit and URDFS and the inverse kinematics of manipulators.
 
-That's just the basics. From there, you can either specialize- which involves getting familiar with Rviz for viualization, Gazebo for simulation, MATLAB's simulink, and various SLAM (simultaneous mapping and localization) tools. Or generalizing in any number of fields/subsystems. For example, using low level programming knowledge to branch into working on the electronics, schematics and circuit design. Or networking/comms knowledge to set up and configure the radios and the networks, fixing the IPs, setting up wifi on the jetson, etc. Or CAD knowledge to start designing parts for manufacture, for 3D printing or for using in the URDF for better visualization. And if nothing else, spend the time learning Linux better because you will 100% have at least one computer issue that Linux familiarity can fix. Everything is adjacent to everything in robotics.
+That's just the basics. From there, you can either specialize- which involves getting familiar with Rviz for viualization, Gazebo for simulation, MATLAB's simulink, and various SLAM (simultaneous mapping and localization) tools. Or generalising in any number of fields/subsystems. For example, using low level programming knowledge to branch into working on the electronics, schematics and circuit design. Or networking/comms knowledge to set up and configure the radios and the networks, fixing the IPs, setting up wifi on the jetson, etc. Or CAD knowledge to start designing parts for manufacture, for 3D printing or for using in the URDF for better visualization. And if nothing else, spend the time learning Linux better because you will 100% have at least one computer issue that Linux familiarity can fix. Everything is adjacent to everything in robotics.
 
 ## The Various Ways In Which Chat-GPT Is Used
 
@@ -74,12 +74,12 @@ As a maths guy, I can't help but gush over how much math there is in everything.
 - Describing the distribution of mass of a mechanical component using the inertia tensor (used in IMUs)
 - Standard dynamics to describe forces acting on components of the rover, and other moments acting on the rover like torque, first moments of area, second moment of inertia etc
 - Using Lie groups such as SO(3) and SE(3) to model smooth movements of the manipulator in space
-- Analyzing the bandwidth based of the frequency space a signal occupies using the Fourier Transform
+- Analysing the bandwidth based of the frequency space a signal occupies using the Fourier Transform
     - The design of stable feedback systems in radio recievers uses the Laplace Transform
 - Image and edge detection in computer vision uses a discrete convolution- which is different but related to the convolution theorem in signal processing
 - Programming IK is a whole thing on its own- let $$p(x): \mathbb{R}^m \to \mathbb{R}^3$$, let $$p_0 = p(x_0)$$, and $$p_1 = p(x_0 + \Delta x)$$ be the goal position of the system. The goal of the system is to reduce the error given by $$\Vert p(x_0 + \Delta x_{estimate}) \Vert$$
 - Transforms from joint to joint in a manipulator- are all just rigid body transforms (rotation and translation). These are mathematically affine transformations given by 4x4 homogenous transformation matrices
-- Anytime anything moves, its velocity is a derivative, its acceleration is a second derivative and its accumulated movement is an integral- for example, in a PID controller. Minimizing jerk (third derivative) is also important so that bodies don't feel a sudden change in acceleration.
+- Anytime anything moves, its velocity is a derivative, its acceleration is a second derivative and its accumulated movement is an integral- for example, in a PID controller. Minimising jerk (third derivative) is also important so that bodies don't feel a sudden change in acceleration.
 - SLAM uses a lot of probabilistic stuff, like the Kalman filter, and can use fuzzy logic for estimating where an object is (odometry validation)
 - Lots more stuff I'm sure I'll remember and regret not writing later
 
