@@ -35,7 +35,7 @@ Programming languages aren't the only technologies that have been designed- cons
 
 ## Beyond Technology
 
-Let us abstract away once more. What other abstract concepts "act" on things?
+Let us abstract away once more. What other concepts "act" on things?
 
 'System' is about as abstract a word as there is. I will define it as "a process that does something"- in a pure mathematical sense, a process, as an object, that changes global state. It does something, makes a measurable change on the surrounding context. All human-created systems are designed, all human created systems have use cases. And if you want to get philosophical, there is an argument that natural systems do too. Society is a system, that acts on people who modify society- it is dynamic, as a programming language is. The implementer is us. Society is opinionated because it is built with a certain type of person in mind, an "ideal" person that uses society exactly how it was intended to be used to get the most out of it and give the most back to it. And I, having lived in this society for 20 years, can reverse engineer this person. He isn't vegetarian- why would he be, and choose not to be able to eat most food at most restaurants? He is straight, as his wedding form has a bride and groom section. He is white and unaffected by institutionalized racism. We call this opinionatedness "normativity".
 
