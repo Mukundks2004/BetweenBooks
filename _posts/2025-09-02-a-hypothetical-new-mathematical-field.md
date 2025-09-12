@@ -8,7 +8,7 @@ image:
     path: /assets/img/homotopy_background.png
 ---
 
-I am not a mathematicianby trade but I have always enjoyed it as a hobby, and for the longest time have wanted to invent my own math. The way inventing new math typically goes is someone works their way to the edge of human knowledge through the years of reasearch and study undergone during a masters degree and finally pushes that boundary back slightly with a PhD. I've long since stopped entertaining the thought that I would ever be able to invent new math. That hasn't stopped me from fantasizing about it. So, I would like to present a field of math I can see myself discovering in an alternative reality, out there somewhere. 
+I am not a mathematician by trade but I have always enjoyed maths as a hobby, and for the longest time have wanted to invent my own math. The way inventing new math typically goes is someone works their way to the edge of human knowledge through the years of research and study undergone during a masters degree and finally pushes that boundary back slightly with a PhD. I've long since stopped entertaining the thought that I would ever be able to invent new math. That hasn't stopped me from fantasising about it. So, I would like to present a field of math I can see myself discovering in an alternative reality, out there somewhere. 
 
 ## Background and Motivation
 
