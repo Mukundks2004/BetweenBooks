@@ -1,6 +1,6 @@
 ---
 title: Proving Natural Addition Commutes from First Principles
-date: 2025-09-13 01:00:00 +1000
+date: 2025-09-20 01:00:00 +1000
 
 categories: [Technical]
 tags: [lean,maths,computer-science,technical,type-theory]
@@ -20,7 +20,7 @@ Type theory is the study of types and terms. It also includes the rules for cons
 
 ### A Note on Terms and Programs
 
-Type theory often substitutes the word "terms" with "programs". Loosely speaking, a program is a set of instructions. If you have written code before, computer programs in functional languages (e.g. Haskell functions, Nix flakes) are examples of programs because they always return something. Consider the minimal program `2 + 3` in a language such as Haskell. The type of this program is `Int` because it evaluates to the term `5`, which is of type `Int`. That the program evaluates to a fixed value is the same as it "returning" or "outputting" that value. Similarly to terms, programs are categorised by their types. The program `7` is different to the program `2 + 3` but they have the same type. The question of whether `2 + 3` and `5` are the same program is a little bit harder to answer but the academic consensus is yes, as [they reduce to the same normal form](https://lean-lang.org/doc/reference/latest/The-Type-System/#:~:text=In%20addition%20to%20having%20types%2C%20terms%20are%20also%20related%20by%20definitional%20equality.%20This%20is%20the%20mechanically%2Dcheckable%20relation%20that%20syntactically%20equates%20terms%20modulo%20their%20computational%20behavior.%20Definitional%20equality%20includes%20the%20following%20forms%20of%20reduction%3A). 
+Type theory often substitutes the word "terms" with "programs". Loosely speaking, a program is a set of instructions. If you have written code before, computer programs in functional languages (e.g. Haskell functions, Nix flakes) are examples of programs because they always return something. Consider the minimal program `2 + 3` in a language such as Haskell. The type of this program is `Int` because it evaluates to the term `5`, which is of type `Int`. That the program evaluates to a fixed value is the same as it "returning" or "outputting" that value. Similarly to terms, programs are categorised by their types. The program `7` is different to the program `2 + 3` but they have the same type. The question of whether `2 + 3` and `5` are the same program is a little bit harder to answer but the academic consensus is yes, as [they reduce to the same normal form in most implementations](https://lean-lang.org/doc/reference/latest/The-Type-System/#:~:text=In%20addition%20to%20having%20types%2C%20terms%20are%20also%20related%20by%20definitional%20equality.%20This%20is%20the%20mechanically%2Dcheckable%20relation%20that%20syntactically%20equates%20terms%20modulo%20their%20computational%20behavior.%20Definitional%20equality%20includes%20the%20following%20forms%20of%20reduction%3A). 
 
 ## The Curry-Howard Correspondence
 
@@ -112,6 +112,22 @@ Here is a breakdown of how this works:
 
 Now that we understand the Curry-Howard correspondence in theory and in practice, we can construct our first non trivial proof- proving that natural addition commutes.
 
-## Outline of the Proof
+## Foreword
 
-I thought this would be a good exercise in mathematical foundations. I recently completed a [textbook on set theory](https://mukundks2004.github.io/BetweenBooks/posts/halmos-set-theory-a-review/) and while I generally enjoyed it and found the content sufficiently rigorous I was generally unsatisfied with the degree of 'fundamentality' of set theoretic constructions. I went into the book under the assumption everything would be from the ground up. And that was largely the case. But personally
+I thought this would be a good exercise in mathematical foundations. I recently completed a [textbook on set theory](https://mukundks2004.github.io/BetweenBooks/posts/halmos-set-theory-a-review/) and while I generally enjoyed it and found the content sufficiently rigorous I was generally unsatisfied with the degree of 'fundamentality' of set theoretic constructions. I went into the book under the assumption everything would be from the ground up. And that was largely the case. But when it came to the first induction-based proofs of the naturals I couldn't help but feel that I was being pushed in a certain direction when defining and proving things. In my opinion the motivation for steps in a proof or for a new concept should be clear and if not the exercise should be revisited retroactively. In addition to this I felt that I could not draw the line between 'pure' symbolic manipulation and 'flawed' non-rigorous logical justification. Was my proof that $$0 + n = n$$ for natural $$n$$ correct or did I assume something I shouldn't have? We have exactly the right tools to solve both of these problems now. We'll build everything from the ground up in a way that seems impartial and necessary and the type checker will catch any logical mistakes. Our weapon of choice will be lean4.
+
+## Defining the Naturals
+
+We'll be assuming the [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms) to define the naturals- which has been standard mathematics practice for centuries. We won't use all of them and importantly no other assumptions will be made! I'll try to document which axioms correspond to which 'boilerplate', which in this case is code that we need/features we rely on separate to our actual math.
+
+![Peano Axioms](peano_axioms.png)
+
+To define a new datatype (for the naturals) we use the `inductive` keyword.
+
+```haskell
+inductive MyNat : Type where
+  | zero : MyNat                -- by 1)
+  | succ : MyNat → MyNat        -- by 6)
+```
+
+We'll call our naturals `MyNat`s to avoid naming conflicts and potential ambiguity when talking about the real lean `Nat`s which have more structure than the minimal skeleton we define here.
