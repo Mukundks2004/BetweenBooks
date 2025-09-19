@@ -1,5 +1,5 @@
 ---
-title: Halmos' Set Theory- a Review
+title: "Halmos' Set Theory: a Review"
 date: 2025-01-31 13:30:00 +1100
 
 categories: [Books Film and Music]
@@ -26,14 +26,14 @@ Which only made my head hurt even more as I tried to linearly progress through t
 
 ## Everything Is a Set  
 
-This is mostly a consequence of set theory itself, but also heavily aided by Halmos in his writing style: every "thing" in formal mathematics is a set. Operations on sets produce more sets, and other objects that are frequently used in conjunction with sets or on sets are, under the hood, sets. I agree with the author's decision not to obscure this, and can liken it to the same pedagogical principle that compels univiersities to teach programming in C before moving on to higher level languages: the lack of management leaves no ambiguity in what more abstract ideas actually are concretely, or if the abstractions are even allowed to exist (more on this later). Analogously, you don't want to teach a foreach loop in C# without first understanding what an iterator or while loop is, since that's the "brain" behind how the loop works. Here are some examples of things that (once understood) we refer to as a single, undecomposable, atomic black box despite actually sets under the hood! They might start simple- it is quite easy to think of an "unordered pair" as a set with two elements- but very quickly we enter territory where even seasoned mathematicians may find themselves asking "Really? *That's* a set??"
+This is mostly a consequence of set theory itself, but also heavily promoted by Halmos in his writing style: every "thing" in formal mathematics is a set. Operations on sets produce more sets, and other objects that are frequently used in conjunction with sets or on sets are, under the hood, sets. I agree with the author's decision not to obscure this, and can liken it to the same pedagogical principle that compels univiersities to teach programming in C before moving on to higher level languages: the lack of management leaves no ambiguity in what more abstract ideas actually are concretely, or if the abstractions are even allowed to exist (more on this later). Analogously, you don't want to teach a foreach loop in C# without first understanding what an iterator or while loop is, since that's the "brain" behind how the loop works. Here are some examples of things that (once understood) we refer to as a single, undecomposable, atomic black box despite actually sets under the hood! They might start simple- it is quite easy to think of an "unordered pair" as a set with two elements- but very quickly we enter territory where even seasoned mathematicians may find themselves asking "Really? *That's* a set??"
 
-- Intersections and Unions of Sets
+- Intersections and Unions of sets
 - Unordered pairs
 - Complement of a set
 - Symmetric difference of sets
 - Cartesian products of sets
-- Powersets
+- Powerset of a set
 - Ordered pairs
     - Tuples
 - Relations
