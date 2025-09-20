@@ -56,7 +56,13 @@ theorem add_succ (a b : MyNat) : myAdd a (MyNat.succ b) = MyNat.succ (myAdd a b)
   rfl                                                                                       -- by 6.
 ```
 
-Our first theorems have no substance- we are just giving definitionally equal terms a name for easy future reference. Theorems are semantically identical to functions, the main difference being the return type of a theorem must be some kind of proposition- which `a = b` is and `TwoPlusTwoEqualsFour` (from the last article) isn't. `add_zero` is otherwise a function that accepts a parameter `a` of type `MyNat` and returns a value of type `myAdd a .zero = a`. Remember the only tool we have so far for constructing proofs of equality is `Refl`, known as `rfl` in lean (`refl` with a lowercase 'r' also exists but has a different meaning). Remember that `rfl` takes a term `x` and constructs a term of the type `x = x`. We didn't provide this term- it is implicit and the lean4 elaborator (part of the compiler) simply guessed that it should use `a` as `x`. Lean remembers the definition for `myAdd` which says that `myAdd a MyNat.zero` is definitionally equal to `a`. So it is able to use that rule to reduce the required type from `myAdd a .zero = a` to `a = a` and then construct it from the parameter `a`, by invoking `rfl`. This process of changing the required type is known as manipulating the 'goal' and is a central part of proofs. We can manipulate goals in all kinds of complex ways such as splitting them up into cases, proving things via contradiction, etc. Techniques for doing so are called 'tactics'- we just used the `refl` tactic. For the theorem `add_succ` lean does something similar, this time using the `myAdd` definition for `a, MyNat.succ b`. Every time we invoke `rfl` we are using the 6th axiom- we are assuming `a = a` in order to show it is inhabited.
+Our first theorems have no substance- we are just giving definitionally equal terms a name for easy future reference. Theorems are semantically identical to functions, the main difference being the return type of a theorem must be some kind of proposition- which `a = b` is and `TwoPlusTwoEqualsFour` (from the last article) isn't. `add_zero` is otherwise a function that accepts a parameter `a` of type `MyNat` and returns a value of type `myAdd a .zero = a`. Look at how the proposition is formulated- we are calling a function `myAdd` on an unknown input `a` whose type is `MyNat`- this becomes the `lhs` of the return type of the theorem. Additionally, the term `a` will never exist, all we want is the type of `a`. This can be thought of logically as a hypothetical, or an 'if-then'. 'If' `a` is provided 'then' the following proposition must hold. This is the motivation behind the arrow syntax in functional programming, to be consistent with logical implication. 
+
+Remember the only tool we have so far for constructing proofs of equality is `Refl`, known as `rfl` in lean (`refl` with a lowercase 'r' also exists but has a different meaning). Remember that `rfl` takes a term `x` implicitly and constructs a term of the type `x = x`. We didn't provide this term- it is implicit and the lean4 elaborator (part of the compiler) simply guessed that it should use `a` as `x`. Lean remembers the definition for `myAdd` which says that `myAdd a MyNat.zero` is definitionally equal to `a`. So it is able to use that rule to reduce the required type from `myAdd a .zero = a` to `a = a` and then construct it from the parameter `a`, by invoking `rfl`. This process of changing the required type is known as manipulating the 'goal' and is a central part of proofs. We can manipulate goals in all kinds of complex ways such as splitting them up into cases, proving things via contradiction, etc. Techniques for doing so are called 'tactics'- we just used the `refl` tactic. For the theorem `add_succ` lean does something similar, this time using the `myAdd` definition for `a, MyNat.succ b`. Every time we invoke `rfl` we are using the 6th axiom- we are assuming `a = a` in order to show it is inhabited.
+
+Before we can prove commutativity (we will refer to this theorem from now on as `add_comm`) we need to prove some supporting theorems. Unfortunately I can't just explain why we need these particular theorems. Halmos' text quite literally gave instruction to prove exactly these specific supporting theorems and use them in the commutativity proof, which (as mentioned) I found unsatisfying. With the convenience of a vigilant type checker, I was able to explore freely trying to prove `add_comm`, warned whenever I skipped a step or assumed something incorrectly. It felt good to arrive at a conclusion on my own: I ended up figuring out it was easiest to use exactly the theorems that Halmos laid out. Let's prove them.
+
+## Mathematical Induction
 
 ```haskell
 theorem zero_add (a : MyNat) : myAdd .zero a = a := by                                      -- the 'by' keyword precedes 'induction' to enter induction
@@ -69,6 +75,21 @@ theorem zero_add (a : MyNat) : myAdd .zero a = a := by                          
 Side note: notating each step to declare with exact precision how we were able to get to that step reminds me of the [style of proof when proving logical equivalence](https://math.stackexchange.com/questions/1237713/proving-p-to-q-landp-to-r-equiv-p-toq-land-r-using-logic-laws-short?rq=1) in discrete math. After all, that's exactly what we're doing- 'rigid symbol manipulation'.
 {: .prompt-info }
 
+Now we declare a non trivial theorem. `zero_add` is the theorem that $$\forall n \in \mathbb{N} : 0 + n = n$$, not to be confused with `add_zero` which is definitionally true. Since we're not working exclusively with theorems where `lhs = rhs`, we need a new tactic. We'll use `5.`, induction. The premise of mathematical induction is simple. Let $$P(x)$$ be a proposition on a natural, $$x$$. If $$P(0)$$ and $$P(n)$$ implies $$P(n + 1)$$ for all $$n$$, there is a natural cascading effect which proves $$P$$ for all naturals- $$P(0)$$ implies $$P(1)$$ which implies $$P(2)$$ and so on. Much like a toppling domino, triggering the next one in the sequence.
+
+![Mathematical induction](/assets/img/induction.png)
+
+The amazing thing about induction in lean is that there is no inhererent logic in the induction keyword itself. Remember that in lean the elaborator knows about all the finitely many ways to construct an object. So if you can prove that no matter how an object $$x$$ is constructed, that $$P(x)$$ holds, you have proved $$P$$ for all $$x$$! This is why GADTs in lean are known as 'inductive' data types- because they are defined inductively. The data type itself is where the induction 'comes from'- which means you can use the induction tactic on any data type, like `List` or `Tree`. Consider the fact that to construct a `MyNat` using the `.succ` data constructor you need another `MyNat`. This naturally corresponds to the induction hypothesis, that $$P$$ holds for some $$k$$, that is a usable assumption when proving $$P$$ holds for $$k + 1$$, which is incredible!
+
+What the induction tactic does is, for each data constructor, provide us with the relevant inductive hypotheses. These constructors must be handled one by one in the pattern match syntax using `|` (if) and `=>` (then). Since `.zero` is constructed from nothing, it must be proven in a vacuum with no hypotheses. Luckily for us, the zero case is trivially true (from the definition of `myAdd` in case you forgot.) For `.succ` we are provided `ih` (the inductive hypothesis)- which is a theorem we can use exclusively inside the `succ` block in `zero_add`. The VS Code lean extension is fantastic when it comes to elucidating goals and the types of variables. On hover, we can see the type of the inductive hypothesis is the goal of `zero_add` and the mini-goal is the goal of `zero_add` with `b` replaced by `.succ b`.
+
+![The type of the inductive hypothesis](/assets/img/induction_zero_add.png)
+
+This makes our working expression `myAdd .zero (.succ b) = .succ b` which we hope to will manipulate into something we know is definitionally true- so we can use `rfl` (which is still the only way we really know how to close a proof). Notice how we've abstracted beyond producing terms of a type now- we're able to interpret what we're doing purely as algebraic/logical manipulation and rearrangement. To manipulate our working expression into the expected expression, we will introduce another tactic: `rw`. `rw` stands for rewrite- it takes an equality proposition eg `a = b` and replaces all instances of `a` with `b` in the working expression. `rw` also tries to close the goal with `rfl` and fails silently if it cannot. `rw` can also chain multiple rewrites together as we will do. By applying `add_succ`, which states that `myAdd x (.succ y)` is the same as `.succ (myAdd x y)`, we rewrite `myAdd .zero (.succ b) = .succ b` into `.succ (myAdd .zero b) = .succ b`. `ih` states that `myAdd .zero a = a`. Applying this, our goal not only becomes `.succ b = .succ b` but is successfully closed by `rfl`.
+
+You might start to notice that despite all this fancy technology and tactics, we are still proving things basically the same way we would on paper. Fundamentally, a proof assistant is only an assistant and a human operator must do the work of writing out the definitions and proofs. But we will hopefully see in future proofs just how advanced and automatic tactics can get. When coupled with copilot, proof writing becomes not just more formally correct but much, much faster than it could ever be on paper.
+{: .prompt-info }
+
 ```haskell
 theorem succ_add (a b : MyNat) : myAdd (MyNat.succ a) b = MyNat.succ (myAdd a b) := by
   induction b with                                                                          -- by 5.
@@ -77,6 +98,10 @@ theorem succ_add (a b : MyNat) : myAdd (MyNat.succ a) b = MyNat.succ (myAdd a b)
     rw [add_succ, ih]                                                                       -- by 8.
     rw [← add_succ]                                                                         -- by 7.
 ```
+
+The proof of `succ_add` is similarly straightforward. The only new addition is the backwards arrow `←` in `rw [← add_succ]`. `rw a = b` has a very specific, algorithmic purpose- it substitutes `b` in every place where there was previously an `a` in the working expression. `←` reverses the substitution, writing `a` in every place where there was previously a `b`. This is an application of the symmetry of equality- if `a` is equal to and replaceable by `b`, `b` is equal to and replaceable by `a`.
+
+## Putting It All Together
 
 ```haskell
 theorem add_comm (a b : MyNat) : myAdd a b = myAdd b a := by
@@ -87,4 +112,19 @@ theorem add_comm (a b : MyNat) : myAdd a b = myAdd b a := by
     rw [add_succ, succ_add, ih]                                                             -- by 8.
 ```
 
-This article was a ton of fun to write. I've been studying type theory in an academic context for about a year now and I've recently starting proving my software specifications with lean, so I felt comfortable writing about type theory without any prior research. If you have any suggestions for which direction to take this series in, submit a PR with your request [here](https://github.com/Mukundks2004/BetweenBooks). For now I'll give type theory a break and move on to some more artsy subjects.
+Having meticulously defined and practiced all the tactics and constructs we need in previous theorems, the proof for `add_comm` becomes simple. This proof is verified at compile time with a double blue tick in the editor- without ever needing to call the theorem as a function to execute it. Isn't it rewarding to chunk down a (relatively) complex proof into manageble lemmas, cracking them one by one before finally tackling the final boss? To need a nonobvious substitution midway through an advanced manipulation and to have it readily available? I hope I have both equipped you with the tools and knowledge necessary to start proving things on your own, as well as provided you with inspiration for doing so.
+
+As a parting gift, here's the proof for associativity of natural addition for comparison- you can see the rewrites it uses are simpler, even though there are many of them. This is why usually associativity is proven before commutativity, it doesn't need as many supporting lemmas.
+
+```haskell
+theorem add_assoc (a b c : MyNat) : myAdd (myAdd a b) c = myAdd a (myAdd b c) := by
+  induction c with
+  | zero =>
+    rw [add_zero, add_zero]
+  | succ c ih =>
+    rw [add_succ, add_succ, add_succ, ih]
+```
+
+## Ending Note
+
+This article was a ton of fun to write. I wrote it at the same time as Part I and decided at the last minute to cut them up since they sort of fell into two halves naturally. I've been studying type theory in an academic context for about a year now and I've recently starting proving my software specifications with lean, so I felt comfortable writing about type theory without any prior research. If you have any suggestions for which direction to take this series in, submit a PR with your request [here](https://github.com/Mukundks2004/BetweenBooks). For now I'll give type theory a break and move on to some more artsy subjects.
