@@ -1,9 +1,9 @@
 ---
 title: A Hypothetical New Mathematical Field
-date: 2025-09-02 17:00:00 +1100
+date: 2025-09-02 17:00:00 +1000
 
 categories: [Technical]
-tags: [math,hott,computer-science,programming,dsa,dijkstra,time-complexity,optimization]
+tags: [maths,hott,computer-science,programming,dsa,dijkstra,time-complexity,optimization]
 image:
     path: /assets/img/homotopy_background.png
 ---
