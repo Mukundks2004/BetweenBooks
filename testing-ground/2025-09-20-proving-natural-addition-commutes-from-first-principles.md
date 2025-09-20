@@ -1,5 +1,5 @@
 ---
-title: Type Theory Part II: Proving Natural Addition Commutes from First Principles
+title: "Type Theory Part II: Proving Natural Addition Commutes from First Principles"
 date: 2025-09-20 01:00:00 +1000
 
 categories: [Technical]
@@ -8,7 +8,7 @@ image:
     path: /assets/img/building_blocks.jpg
 ---
 
-All the code snippets in this article are compiled into a fully working proof accessible [here](https://github.com/Mukundks2004/arithmetic-first-principles)
+> All the code snippets in this article are compiled into a fully working proof accessible [here](https://github.com/Mukundks2004/arithmetic-first-principles)
 {: .prompt-info }
 
 ## Foreword
@@ -17,29 +17,29 @@ I believe proving that natural addition commutes is a good exercise in mathemati
 
 ## Defining the Naturals
 
-We'll be assuming the [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms) to define the naturals- which has been standard practice for centuries. We won't use all of them and importantly no other assumptions will be made! I'll try to document which axioms correspond to which 'boilerplate code', which in this case is code that we need/features we rely on separate to the math we create.
+We'll be assuming the [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms) to define the naturals. This has been standard practice for centuries. We won't use all of them and importantly no other assumptions will be made! I'll document which axioms correspond to which 'boilerplate code', which in this case is code that we need/features we rely on separate to the math we create.
 
 ![Peano Axioms](/assets/img/peano_axioms.png)
 
-Only the first 5 axioms are real Peano axioms. Equality precedes the axioms and is built into ZFC itself. This means the orthodox definition does not quantify that 'objects' in an equivalence relation be naturals, and there is no need to introduce this definition when discussing the Peano axioms. Then, there is usually a fourth equality axiom introduced specifically for the naturals stating that they are closed under equality. Since we are 'skipping' sets and only constructing naturals (via types) it is appropriate to axiomise equality. Natural addition is usually constructed by the mathematician for their own needs; it is not inherently part of the Peano axioms. Since we are assuming addition exists to prove commutativity we will axiomize the [standard definition](https://en.wikipedia.org/wiki/Peano_axioms#:~:text=order%20theory%20below.-,Defining%20arithmetic%20operations%20and%20relations,-%5Bedit%5D).
+Only the first 5 axioms are real Peano axioms. Equality precedes the axioms and is built into ZFC itself. This means the orthodox definition does not require that 'objects' in an equivalence relation be naturals, and there is typically no need to introduce this definition when discussing the Peano axioms. In these cases, there is usually a fourth equality axiom introduced specifically for the naturals stating that they are closed under equality. Since we are 'skipping' sets and only constructing naturals (via types) it is appropriate to axiomise equality. Natural addition is usually constructed by the mathematician for their own needs; it is not inherently part of the Peano axioms. Since we are assuming addition exists to prove commutativity we will axiomize the [standard definition](https://en.wikipedia.org/wiki/Peano_axioms#:~:text=order%20theory%20below.-,Defining%20arithmetic%20operations%20and%20relations,-%5Bedit%5D).
 
 
 To define a new datatype, the naturals, we use the `inductive` keyword.
 
-```haskell
+```lean
 inductive MyNat : Type where
-  | zero : MyNat                                                                            -- by 1.
-  | succ : MyNat → MyNat                                                                    -- by 2.
+  | zero : MyNat                    -- by 1.
+  | succ : MyNat → MyNat            -- by 2.
 ```
 
 We'll call our naturals `MyNat`s to avoid naming conflicts and potential ambiguity when talking about the real lean `Nat`s, which have more structure than the minimal skeleton we define here. The axioms tell us that `0` is a `MyNat` and we have an abstract `S` unary operation we can apply to a `MyNat` to yield another `MyNat`. The first line tells us the kind of `MyNat` is `Type`- so `MyNat` is not indexed by other types. In that sense it is 'simple' as you would expect the naturals to be. `MyNat` has two data constructors- `zero` produces a `MyNat` for us automatically, while `succ` requires a `MyNat` to iterate on. Hence it has the type `MyNat → MyNat`. Lean4 tries to be idiomatic with mathematical expressions, so many functional programming syntaxes are replaced with the unicode symbols that inspired them (e.g. `->` becoming `→`.)
 
 ## Addition
 
-```haskell
+```lean
 def myAdd : MyNat → MyNat → MyNat
-  | a, .zero => a                                                                           -- by 9.
-  | a, .succ b => MyNat.succ (myAdd a b)                                                    -- by 10.
+  | a, .zero => a                               -- by 9.
+  | a, .succ b => MyNat.succ (myAdd a b)        -- by 10.
 ```
 
 Note we have used `.zero` to refer to `MyNat.zero` and `.succ` to refer to `MyNat.succ`, and that we've called our function `myAdd` to keep it distinct from anything preexisting or floating around in the namespace.
@@ -48,12 +48,12 @@ These two recursive rules for computing addition result in a definition of addit
 
 ## First Theorems
 
-```haskell
+```lean
 theorem add_zero (a : MyNat) : myAdd a .zero = a := by
-  rfl                                                                                       -- by 6.
+  rfl                                                                                    -- by 6.
 
 theorem add_succ (a b : MyNat) : myAdd a (MyNat.succ b) = MyNat.succ (myAdd a b) := by
-  rfl                                                                                       -- by 6.
+  rfl                                                                                    -- by 6.
 ```
 
 Our first theorems have no substance- we are just giving definitionally equal terms a name for easy future reference. Theorems are semantically identical to functions, the main difference being the return type of a theorem must be some kind of proposition- which `a = b` is and `TwoPlusTwoEqualsFour` (from the last article) isn't. `add_zero` is otherwise a function that accepts a parameter `a` of type `MyNat` and returns a value of type `myAdd a .zero = a`. Look at how the proposition is formulated- we are calling a function `myAdd` on an unknown input `a` whose type is `MyNat`- this becomes the `lhs` of the return type of the theorem. Additionally, the term `a` will never exist, all we want is the type of `a`. This can be thought of logically as a hypothetical, or an 'if-then'. 'If' `a` is provided 'then' the following proposition must hold. This is the motivation behind the arrow syntax in functional programming, to be consistent with logical implication. 
@@ -64,12 +64,12 @@ Before we can prove commutativity (we will refer to this theorem from now on as 
 
 ## Mathematical Induction
 
-```haskell
-theorem zero_add (a : MyNat) : myAdd .zero a = a := by                                      -- the 'by' keyword precedes 'induction' to enter induction
-  induction a with                                                                          -- by 5.
-  | zero => rfl                                                                             -- by 6.
-  | succ b ih =>                                                                            -- by 5.
-    rw [add_succ, ih]                                                                       -- by 8.
+```lean
+theorem zero_add (a : MyNat) : myAdd .zero a = a := by    -- the 'by' keyword precedes 'induction' to enter induction
+  induction a with                                        -- by 5.
+  | zero => rfl                                           -- by 6.
+  | succ b ih =>                                          -- by 5.
+    rw [add_succ, ih]                                     -- by 8.
 ```
 
 Side note: notating each step to declare with exact precision how we were able to get to that step reminds me of the [style of proof when proving logical equivalence](https://math.stackexchange.com/questions/1237713/proving-p-to-q-landp-to-r-equiv-p-toq-land-r-using-logic-laws-short?rq=1) in discrete math. After all, that's exactly what we're doing- 'rigid symbol manipulation'.
@@ -90,33 +90,33 @@ This makes our working expression `myAdd .zero (.succ b) = .succ b` which we hop
 You might start to notice that despite all this fancy technology and tactics, we are still proving things basically the same way we would on paper. Fundamentally, a proof assistant is only an assistant and a human operator must do the work of writing out the definitions and proofs. But we will hopefully see in future proofs just how advanced and automatic tactics can get. When coupled with copilot, proof writing becomes not just more formally correct but much, much faster than it could ever be on paper.
 {: .prompt-info }
 
-```haskell
+```lean
 theorem succ_add (a b : MyNat) : myAdd (MyNat.succ a) b = MyNat.succ (myAdd a b) := by
-  induction b with                                                                          -- by 5.
-  | zero => rfl                                                                             -- by 6.
-  | succ b ih =>                                                                            -- by 5.
-    rw [add_succ, ih]                                                                       -- by 8.
-    rw [← add_succ]                                                                         -- by 7.
+  induction b with                                                  -- by 5.
+  | zero => rfl                                                     -- by 6.
+  | succ b ih =>                                                    -- by 5.
+    rw [add_succ, ih]                                               -- by 8.
+    rw [← add_succ]                                                 -- by 7.
 ```
 
 The proof of `succ_add` is similarly straightforward. The only new addition is the backwards arrow `←` in `rw [← add_succ]`. `rw a = b` has a very specific, algorithmic purpose- it substitutes `b` in every place where there was previously an `a` in the working expression. `←` reverses the substitution, writing `a` in every place where there was previously a `b`. This is an application of the symmetry of equality- if `a` is equal to and replaceable by `b`, `b` is equal to and replaceable by `a`.
 
 ## Putting It All Together
 
-```haskell
+```lean
 theorem add_comm (a b : MyNat) : myAdd a b = myAdd b a := by
-  induction b with                                                                          -- by 5.
-  | zero =>                                                                                 -- by 5.
-    rw [add_zero, zero_add]                                                                 -- by 8.
-  | succ b ih =>                                                                            -- by 5.
-    rw [add_succ, succ_add, ih]                                                             -- by 8.
+  induction b with                                                     -- by 5.
+  | zero =>                                                            -- by 5.
+    rw [add_zero, zero_add]                                            -- by 8.
+  | succ b ih =>                                                       -- by 5.
+    rw [add_succ, succ_add, ih]                                        -- by 8.
 ```
 
 Having meticulously defined and practiced all the tactics and constructs we need in previous theorems, the proof for `add_comm` becomes simple. This proof is verified at compile time with a double blue tick in the editor- without ever needing to call the theorem as a function to execute it. Isn't it rewarding to chunk down a (relatively) complex proof into manageble lemmas, cracking them one by one before finally tackling the final boss? To need a nonobvious substitution midway through an advanced manipulation and to have it readily available? I hope I have both equipped you with the tools and knowledge necessary to start proving things on your own, as well as provided you with inspiration for doing so.
 
 As a parting gift, here's the proof for associativity of natural addition for comparison- you can see the rewrites it uses are simpler, even though there are many of them. This is why usually associativity is proven before commutativity, it doesn't need as many supporting lemmas.
 
-```haskell
+```lean
 theorem add_assoc (a b c : MyNat) : myAdd (myAdd a b) c = myAdd a (myAdd b c) := by
   induction c with
   | zero =>
