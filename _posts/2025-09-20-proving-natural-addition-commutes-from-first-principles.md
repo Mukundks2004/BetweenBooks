@@ -11,6 +11,9 @@ image:
 > All the code snippets in this article are compiled into a fully working proof accessible [here](https://github.com/Mukundks2004/arithmetic-first-principles)
 {: .prompt-info }
 
+> You can read Part I [here](https://mukundks2004.github.io/BetweenBooks/posts/introduction-to-type-theory/)
+{: .prompt-info }
+
 ## Foreword
 
 I believe proving that natural addition commutes is a good exercise in mathematical foundations and it is usually required in set theory. [I recently completed a textbook on set theory](https://mukundks2004.github.io/BetweenBooks/posts/halmos-set-theory-a-review/) and while I enjoyed it and found the content sufficiently rigorous I was generally unsatisfied with the degree of 'fundamentality' of set theoretic constructions. I went into the book under the assumption everything would be from the ground up. And that was largely the case. But when it came to the first induction-based proofs I couldn't help but feel that I was being pushed in a certain direction when defining and proving things. In my opinion the motivation for steps in a proof or for a new concept should be self evident and if not the exercise should be revisited retroactively once it becomes so. In addition to this I felt that I could not draw the line between 'pure' symbolic manipulation and 'flawed' non-rigorous logical justification. Was my proof that $$0 + n = n$$ for natural $$n$$ correct or did I assume something I shouldn't have? We have exactly the right tools to solve both of these problems now. We'll build everything from the ground up in a way that is both impartial and necessary and the type checker will catch any logical mistakes. Our weapon of choice will be the CIC-based dependently typed programming language and proof assistant, lean4.
@@ -56,7 +59,7 @@ theorem add_succ (a b : MyNat) : myAdd a (MyNat.succ b) = MyNat.succ (myAdd a b)
   rfl                                                                                    -- by 6.
 ```
 
-Our first theorems have no substance- we are just giving definitionally equal terms a name for easy future reference. Theorems are semantically identical to functions, the main difference being the return type of a theorem must be some kind of proposition- which `a = b` is and `TwoPlusTwoEqualsFour` (from the last article) isn't.
+Our first theorems have no substance- we are just giving definitionally equal terms a name for easy future reference. Theorems are semantically identical to functions, the main difference being the return type of a theorem must be some kind of proposition- which `a = b` is and `TwoPlusTwoEqualsFour` (from Part I) isn't.
 
 ![two plus two equals four as a theorem](/assets/img/not_a_proposition_error.png)
 
