@@ -4,8 +4,10 @@ Blog where I write things. To date I have written about (but not necessarily pub
 - Work
 - Uni
 - Music
-- Idk
+- Math
+- Simple observations
 
 Some technical stuff:
-- The action triggers on PR merge into deployment, and deploys from gh-pages
-- This is changed from previously, when it would trigger on PR merge into gh-pages but deploy from main
+- The action triggers on any commit to main
+- Currently main is unprotected
+    - TODO: change that
