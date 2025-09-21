@@ -5,7 +5,7 @@ date: 2025-09-02 17:00:00 +1000
 categories: [Technical]
 tags: [maths,hott,computer-science,programming,dsa,dijkstra,time-complexity,optimization]
 image:
-    path: /assets/img/homotopy_background.png
+    path: https://imgur.com/pJgGwFS.png
 ---
 
 I am not a mathematician by trade but I have always enjoyed maths as a hobby, and for the longest time have wanted to invent my own math. The way inventing new math typically goes is someone works their way to the edge of human knowledge through the years of research and study undergone during a masters degree and finally pushes that boundary back slightly with a PhD. I've long since stopped entertaining the thought that I would ever be able to invent new math. That hasn't stopped me from fantasising about it. So, I would like to present a field of math I can see myself discovering in an alternative reality, out there somewhere. 
@@ -22,7 +22,7 @@ Here is a simpler example of an algorithm to optimize, with a definitive answer.
 
 Unfortunately it is a trivial consequence of Rice's theorem, which tells us that any non-trivial semantic property of a Turing Machine is undecidable, that no algorithm can ever tell is if another algorithm is optimal. A more in depth explanation can be found [here](https://mathoverflow.net/questions/381795/algorithmically-decide-if-an-algorithm-has-optimal-time-complexity). It seems a shame that such a promising, novel posit is quashed so mercilessly before it even got the chance to be explored. Let us pretend that the argument we just made were not the case and provide it this chance anyway. This is how I would go about exploring the problem.
 
-![dijkstra](/assets/img/dijkstra.jpg)
+![dijkstra](https://imgur.com/jwXisYO.jpeg)
 
 ## Basics of Optimization
 
@@ -34,7 +34,7 @@ $$C([0, 1])$$, which is the set of all continuous functions on the interval $$[0
 
 What’s to stop us from taking a similar approach with algorithms, such as Dijkstra’s?
 
-![optimization](/assets/img/optimization.png)
+![optimization](https://imgur.com/R8Q9Rv8.png)
 
 ## My Proposition- Algorithmic Type Theory
 

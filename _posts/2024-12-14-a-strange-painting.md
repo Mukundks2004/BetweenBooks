@@ -5,7 +5,7 @@ date: 2024-12-14 23:00:00 +1100
 categories: [Misc]
 tags: [philosophy,ramble,tree,painting,eerie,reflection]
 image:
-    path: /assets/img/nightmare_tree_background.jpg
+    path: https://imgur.com/DvFAPZi.jpeg
 ---
 
 This painting is just really weird and really cool. I will ramble a bit about it.
@@ -32,11 +32,11 @@ It's scary, make no mistake. I don't see a freedom in such an existence, and the
 
 It almost reminds me of the post-apocalyptic wasteland that salad fingers roams.
 
-![Salad fingers](/assets/img/salad_fingers.png)
+![Salad fingers](https://imgur.com/ZQTSW3e.png)
 
 It equally reminds me of a scene in *The Witcher*, a particular world that Ciri jumps through where the sky is fire and hellish and the ground is hard and dusty. And the world is sterile and empty, so Ciri can do nothing in it but leave. Which is only one thing (and somehow also everything) more than what we can do.
 
-![Rocks](/assets/img/xkcd_rocks.png)
+![Rocks](https://imgur.com/y3qHuCA.png)
 
 Or this rocks landscape from this classic xkcd strip. From rocks on a plane, the universe we live in simulated bit by bit. The rows blur past to compute a single step.
 

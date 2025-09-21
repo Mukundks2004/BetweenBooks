@@ -5,7 +5,7 @@ date: 2025-09-13 01:00:00 +1000
 categories: [Technical]
 tags: [maths,computer-science,technical,type-theory,category-theory,haskell,idris,programming,godel-escher-bach,philosophy,philosophy-of-meaning,tcs,dependent-typing,set-theory]
 image:
-    path: /assets/img/type_theory_background.png
+    path: https://imgur.com/Gk8qBk4.png
 ---
 
 This article is the first installment in a series on type theory. Type theory is a field of math that is not typically covered in an undergrad math or CS degree, but is surprisingly beginner friendly. When talking about it with friends I often draw parallels between it and category theory since they are both closely related to programming/are CS-adjacent. They are also both learnable without a formal background in math. In fact, [mathematics itself can be founded on either of these](https://www.andrew.cmu.edu/user/awodey/preprints/stcsFinal.pdf) without the need to involve sets. Yet, to encounter either field in classical (not CS) mathematics one must traverse a vast array of terrains over years of study peaking in advanced algebraic topology/homotopy theory. The prototypical motivating example of category theory is the deliberately abstract product construction- which to understand requires that a student has experienced various instances of products from domains such as graph theory, group theory, set theory, and topology, after which the student can of their own see the need for a common unifying definition.

@@ -5,7 +5,7 @@ date: 2024-12-07 2:35:00 +1100
 categories: [Technical]
 tags: [technical,programming,maths,generics,variance,category-theory]
 image:
-    path: /assets/img/programming_background.jpg
+    path: https://i.postimg.cc/7hzzXjBg/programming-background.avif
 ---
 
 Yesterday at work, a friend and I were having a conversation about a strange C# syntactic feature- something he saw in the codebase that he didn't understand. The discussion went as follows
@@ -102,7 +102,7 @@ Action<Dog> dogAction = animalAction;
 
 We've... reversed the order of morphisms? Reversed the inheritance chain?? Oh god, what have we done! Jeff Goldblum was right all along!
 
-![Just because you can does not mean you should](/assets/img/jeff.png)
+![Just because you can does not mean you should](https://imgur.com/Lq3tybA.png)
 
 ## Calm Down!
 

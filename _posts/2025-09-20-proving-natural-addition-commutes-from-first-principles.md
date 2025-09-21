@@ -5,7 +5,7 @@ date: 2025-09-20 01:00:00 +1000
 categories: [Technical]
 tags: [lean,maths,computer-science,technical,type-theory,set-theory,peano,programming]
 image:
-    path: /assets/img/building_blocks.jpg
+    path: https://imgur.com/eN0OTLQ.jpeg
 ---
 
 > All the code snippets in this article are compiled into a fully working proof accessible [here](https://github.com/Mukundks2004/arithmetic-first-principles)
@@ -22,7 +22,7 @@ I believe proving that natural addition commutes is a good exercise in mathemati
 
 We'll be assuming the [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms) to define the naturals. This has been standard practice for centuries. We won't use all of them and importantly no other assumptions will be made! I'll document which axioms correspond to which 'boilerplate code', which in this case is code that we need/features we rely on separate to the math we create.
 
-![Peano Axioms](/assets/img/peano_axioms2.png)
+![Peano Axioms](https://imgur.com/Wh0pWOS.png)
 
 Only the first 5 axioms are real Peano axioms. Equality precedes the axioms and is built into ZFC itself. This means the orthodox definition of equality does not require that 'objects' in an equivalence relation be naturals, and there is typically no need to introduce this definition when discussing the Peano axioms. In these cases, there is a fourth equality axiom introduced specifically for the naturals stating that they are closed under equality. Since we are 'skipping' sets and only constructing naturals (via types) it is appropriate to axiomise equality. Natural addition is usually constructed by the mathematician for their own needs; it is not inherently part of the Peano axioms. Since we are assuming addition exists to prove commutativity we will axiomize the [standard definition](https://en.wikipedia.org/wiki/Peano_axioms#:~:text=order%20theory%20below.-,Defining%20arithmetic%20operations%20and%20relations,-%5Bedit%5D).
 
@@ -61,7 +61,7 @@ theorem add_succ (a b : MyNat) : myAdd a (MyNat.succ b) = MyNat.succ (myAdd a b)
 
 Our first theorems have no substance- we are just giving definitionally equal terms a name for easy future reference. Theorems are semantically identical to functions, the main difference being the return type of a theorem must be some kind of proposition- which `a = b` is and `TwoPlusTwoEqualsFour` (from Part I) isn't.
 
-![two plus two equals four as a theorem](/assets/img/not_a_proposition_error.png)
+![two plus two equals four as a theorem](https://imgur.com/zeC3KP6.png)
 
 `add_zero` is otherwise a function that accepts a parameter `a` of type `MyNat` and returns a value of type `myAdd a .zero = a`. Look at how the proposition is formulated. The `lhs` inside the proposition appears to calls the function `myAdd` on an unknown input `a` whose type is `MyNat`. However, this function call does not ever run since we are only concerned with type checking, which occurs at runtime. In this context `myAdd` does not refer to the concrete subroutine but an abstract named hypothetical transformation on `a`- the term `a` will never exist, all we want is the type of `a`. This can be thought of logically as a hypothetical, or an 'if-then'. 'If' `a` is provided 'then' the following proposition must hold. This is the motivation behind the arrow syntax in FP, to be consistent with logical implication. 
 
@@ -84,13 +84,13 @@ theorem zero_add (a : MyNat) : myAdd .zero a = a := by    -- the 'by' keyword pr
 
 Now we declare a non trivial theorem. `zero_add` is the theorem that $$\forall n \in \mathbb{N} : 0 + n = n$$, not to be confused with `add_zero` which is definitionally true. Since we're not working exclusively with theorems where `lhs = rhs`, we need a new rule. We'll use the axiom `5.`, induction. The premise of mathematical induction is simple. Let $$P(x)$$ be a proposition on a natural, $$x$$. If $$P(0)$$, and $$P(n)$$ implies $$P(n + 1)$$ for all $$n$$, there is a natural cascading effect which proves $$P$$ for all naturals- $$P(0)$$ implies $$P(1)$$ which implies $$P(2)$$ and so on. Much like a toppling domino chain, each domino triggering the next one in the sequence.
 
-![Mathematical induction](/assets/img/induction.png)
+![Mathematical induction](https://imgur.com/Smf6eHE.png)
 
 The amazing thing about induction in lean is that there is no inhererent logic in the induction keyword itself. Remember that in lean the elaborator knows about all the finitely many ways to construct an object. So if you can prove that no matter how an object $$x$$ is constructed, that $$P(x)$$ holds, you have proved $$P$$ for all $$x$$! This is why GADTs in lean are known as 'inductive' data types- because they are defined inductively. The data type itself is where the induction 'comes from'- which means you can use the induction tactic on any data type, like `List` or `Tree`. Consider the fact that to construct a `MyNat` using the `.succ` data constructor you need another `MyNat`. This naturally corresponds to the induction hypothesis, that $$P$$ holds for some $$k$$, a usable assumption when proving $$P$$ holds for $$k + 1$$, which is incredible!
 
 What the induction tactic does is, for each data constructor, provide us with the relevant inductive hypotheses. These constructors must be handled one by one in the pattern match syntax using `|` (if) and `=>` (then). Since `.zero` is constructed from nothing, it must be proven in a vacuum with no hypotheses. Luckily for us, the zero case is trivially true (from the definition of `myAdd` in case you forgot.) For `.succ` we are provided `ih` (the inductive hypothesis)- which is a theorem we can use exclusively inside the `succ` block in `zero_add`. The VS Code lean extension is fantastic when it comes to elucidating goals and the types of variables. On hover, we can see the type of the inductive hypothesis is the goal of `zero_add` and the mini-goal inside this pattern match case is the sae as the overall goal of `zero_add` with `b` replaced by `.succ b`.
 
-![The type of the inductive hypothesis](/assets/img/induction_zero_add.png)
+![The type of the inductive hypothesis](https://imgur.com/VtFM7HM.png)
 
 This makes our working expression `myAdd .zero (.succ b) = .succ b` which we hope to manipulate into something we know is definitionally true- so we can use `rfl` (which is still the only way we really know how to close a proof). Notice how we've abstracted beyond producing terms of a type now- we're able to interpret what we're doing purely as algebraic/logical manipulation and rearrangement. To manipulate our working expression into the expected expression, we will introduce another tactic: `rw`. `rw` stands for rewrite- it takes an equality proposition e.g. `a = b` and replaces all instances of `a` with `b` in the working expression. `rw` also tries to close the goal with `rfl` and fails silently if it cannot. `rw` can also chain multiple rewrites together as we will do. By invoking `rw` on `add_succ` (which states that `myAdd x (.succ y)` is the same as `.succ (myAdd x y)`) we rewrite `myAdd .zero (.succ b) = .succ b` into `.succ (myAdd .zero b) = .succ b`. `ih` states that `myAdd .zero a = a`. Applying this, our goal not only becomes `.succ b = .succ b` but is closed by `rfl` since `lhs `and `rhs` have been shown to be definitionally equal.
 

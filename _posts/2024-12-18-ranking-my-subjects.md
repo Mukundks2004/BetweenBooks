@@ -5,7 +5,7 @@ date: 2024-12-18 17:00:00 +1100
 categories: [University]
 tags: [subjects,university,ranking,review,programming,maths,sql,python,java,networks,linux,software,algorithms,computers,dotnet,interaction-design,business-requirements-modelling,database,application-development]
 image:
-    path: /assets/img/studying_background.png
+    path: https://i.postimg.cc/26MvQCxk/studying-background.webp
 ---
 
 A characteristic feature of being an IDeA cadet that is both good and bad is the fact that the subjects you choose to study are for the most part limited. Coming to the end of my second year, I have had the opportunity to make roughly ONE choice between studying stats or comp sci this summer. This has boosted my ability to rank these subjects impartially dramatically, and I hope that someone who is a little similar to me finds themselves reading this at a time they have to make a difficult decision and that the choice is made easier.
@@ -79,7 +79,7 @@ We went over things like stakeholders and design and the engineering process, wh
 
 Also, we totally partied in class. Aside from the 10 minute break in which we would sprint to central station to get drinks and sprint back (again, first semester, wanted to be on time) we had epic parties after class. Class finished at 9pm on a Tuesday and honestly who- apart from us- would stick around for that? So the class filtered out leaving us the entire floor at the top of building 2.
 
-![Room in building 2](/assets/img/citp_room.png)
+![Room in building 2](https://imgur.com/LtNSbQZ.png)
 
 The single room was split across 2 levels, surrounded by screens that would drop down on command. We (my team) would dim the lights, turn the music up and use the 8 or so mics spread around the room to do awesome 6 person simul karaoke. With food, drinks, and a free Wednesday morning, it was a pretty awesome start to my first sem.
 
@@ -163,7 +163,7 @@ Well for starters I had a bad time. Taking it in sem 1 and being too dumb to lin
 
 Let me analyse this subject a little objectively. UTS for some ridiculous reason does not have DB Funds as a prereq for this subject where half the terminology is derived from relational databases. Terms like "primary key" and "ERD" were tossed around with no context and honestly no clue why I didn't just ask. In retrospect, I should have been a better learner and I feel horrible that I was/did neither. Please always ask. Also, I have never ever had a situation where content has been assumed that was legitimately not covered. I see and hear people complain about it, and I see stuff like this:
 
-![This never happens](/assets/img/kermit_forgot_the_content.png)
+![This never happens](https://imgur.com/o0ULwuK.png)
 
 posted everywhere although I have experienced it NEVER. It usually goes the opposite ways- vectors for example were taught to me in Advanced, Ext and Ext II Math independently, Phys and Chem and Engineering. It was never assumed. In uni we've been over basic programming concepts like variables and control flow in Prog 1, 2, DSA and .NET. This has gotta be the single exception to the rule. Although maybe it had something to do with IDeA cadetship interfering with prereqs, it shouldn't be allowed to happen.
 

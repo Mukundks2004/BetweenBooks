@@ -5,7 +5,7 @@ date: 2024-12-17 19:00:00 +1100
 categories: [Misc]
 tags: [travel,inverell,short-story,funny,fiction]
 image:
-    path: /assets/img/inverell_background.jpg
+    path: https://imgur.com/8Kf9anz.jpeg
 ---
 
 ***Sometimes, things are slow.***
@@ -20,11 +20,11 @@ Inverell is a cozy town nestled in a valley beside the Macintyre river (yeah I h
 
 Inverell is barely a hop, skip and a jump away from Sydney city, if you happen to have no sense of time. It'll take a little more than six and a half hours for you to make your way out here via the M1 motorway and whatever other big roads there are up there beyond Newcastle. This length is the equivalent of going to Newcastle, coming back and going back again. More than half the drive is full of rich scenery like concrete and cars. By the time you leave Sydney, it gets even better with rocks and dust decorating the roadside the entire drive. The experience is one to be cherished, and by the end of it you'll be wishing you had fallen asleep at the wheel and driven off into the only vehicle that passed you on the way.
 
-![Inverell Route](/assets/img/route_to_inverell.png)
+![Inverell Route](https://imgur.com/gGi0I2d.png)
 
 But maybe you're one of the few who didn't get that push from your parents to get your Ps on your 17th. What about you? Today must be your lucky day! You'll get to experience the wonders of NSW TrainLink, Sydney Transport's abusive older brother. In the off chance that your train isn't delayed, cancelled, or [departs early](https://www.theguardian.com/australia-news/2023/oct/03/the-2000-taxi-ride-how-a-simple-missed-train-ended-up-in-an-epic-six-hour-cab-journey), you'll have the honour and priviledge of spending the next 11 hours of your life on various dingy locomotives from the 80s!
 
-![Public Transport To Inverell](/assets/img/inverell_public_transport.png)
+![Public Transport To Inverell](https://imgur.com/habiYbL.png)
 
 First you'll be taking the least efficient route from southwest Sydney (where all great adventures begin) to Central, the T2. Starting at Glenfield at 7:35 am this will take you through Liverpool and Cabramatta, then up near Lidcombe and finally over to Strathfield and Newtown before arriving at the all too familiar ~~Grand~~ Central station! By the time your two hour train ride ends and you're exhausted from all the starting and stopping and the vaping eshays and screaming babies, you'll find yourself... next to UTS. You came all this way for UTS. A perfect way to set the mood for the trip ahead, which hasn't even started yet.
 
@@ -42,13 +42,13 @@ Your stomach drops. I am smiling. You whip out google on your phone, desperately
 
 It turns out intercity trains require tickets and a prior booking, and they won't even let you on without one. You scroll and tap and scroll and tap, your heart racing. After 60 seconds of panic you are greeted by the comforting orange of the transport website. You type in the first box as you arrive at the platform you'll soon be boarding the train on, but you are barred from entry without a ticket! C... E... N, as you punch in the letters the familiar Central station shows up on the left of the screen. Now the right side. I... N... V, and the Inverell coach stop reveals itself. Coach stop? Noone told you Inverell isn't connected by rail? Well too late now! With mere minutes to go, you set the dates and make the purchase. Luckily for you, there's not many options to choose from. *$100 for economy or $130 for first class? Is this a train ride or a flight?? I'll be in debt for weeks. Okay, now the return trip. 6:30 am or 1:30 pm? I can't get up at 6, but the alternative is a 17 hour trip where a sleeper carriage is $300 bucks, and it'll be hours waiting at the interchange?!* The conductor yells. There's no time. You make the purchase, now 450 dollars poorer.
 
-![TrainLink](/assets/img/train_link.png)
+![TrainLink](https://imgur.com/nEs2I2k.png)
 
 The train rolls out of the station. And the great trek begins. The skyscrapers fade within minutes, morphing into the urban sprawl as you travel North. Epping, Hornsby, the buildings become shorter and more spread out. Soon there are no buildings, only grasslands and a coast that persists along the tracks. As you pass Wondabyne, the carriage bursts into cheer, then silence once more. Woy Woy and Point Clare and other little stops come and go, and then Newcastle, but you keep going! And the ride goes on and on and on. The coast disappears from view permanently as you turn inland, and after enough time the ground becomes level and rocky and dusty. You're in the outback now. And the train chugs onwards. The sun peaks in the sky. You see skeletons of animals that died of thirst along the track, which is now nothing like what you're used to in Sydney- no rocky aggregate to mount it, or telephone poles every 50m. You're surrounded by an empty reddish plane that seems oddly familiar, as if it were something seen in a painting...
 
 And the air begins to cool but the train shows no signs of weakness. It's 6:30 in the evening and you're parched and starving. Hours since the last stop. And finally, finally, you hear the guard's gruff voice through the announcement system. *Last stop, Tamworth*. You depart the track, as the train lays still, and hardly anyone steps off with you. You have just entered the Tamworth interchange, and it feels like an entirely different country. The air is warmer than it would be in Sydney at this time of day, the flatness of the landscape in stark contrast to the rolling hills of home. With just an 18 minute layover, you have time to get a coffee and take in the view, which you wish your shitty phone camera would capture. The hills in the distance almost remind you of world 1 in NSMBWii. The nostalgia hits hard man. And as soon as you've finished your freshly purchased $10 coffee and bit into an equally overpriced salad sandwich you see your coach draw in. It's time to hit the road.
 
-![Tamworth Station](/assets/img/tamworth_coach_stop.png)
+![Tamworth Station](https://imgur.com/hmq6axC.png)
 
 ## The Next Few Hours Are a Blur
 
@@ -56,11 +56,11 @@ Up north they drug the sandwiches, it's how they keep the locals under control. 
 
 You stumble out of the coach with your backpack as the drugs wear off. Where are we? The little coach stop you've landed yourself in is just flat and brown, with some little tin sheds and a small strip mall behind you. It reminds you of the 'free dirt' store that Billy and Stan drive past in My Cousin Vinny.
 
-![Free Dirt Equivalent Inverell](/assets/img/inverell_coach_stop.png)
+![Free Dirt Equivalent Inverell](https://imgur.com/iUrzubb.png)
 
 You whip out your phone and you're truly grateful there's reception, without which you would surely die lost and alone stumbling through the bush. 10 minutes and 600m later, you find yourself facing the Inverell motel. Go on inside, I booked a room for ya.
 
-![Inverell Motel](/assets/img/inverell_motel.png)
+![Inverell Motel](https://imgur.com/scsT8vp.png)
 
 The locals are friendly, and not racist. This is a welcome change from Sydney. In fact, they're pretty chatty (or maybe just impressed that you can speak English) and by the time you've grabbed a burger for dinner, gotten the keys and reached your room it's 9pm. A charming little room, it's spacious for a single person. You cry yourself to sleep as you are harshly reminded that you will be forever single.
 

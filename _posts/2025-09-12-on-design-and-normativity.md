@@ -5,14 +5,14 @@ date: 2025-09-12 12:30:00 +1000
 categories: [Misc]
 tags: [society,programming,python]
 image:
-    path: /assets/img/brass_gears_background.jpg
+    path: https://imgur.com/ZNdwYOK.jpeg
 ---
 
 Do you know what an opinionated technology is? The topic came up naturally in conversation at work. It started with some first year cadets talking about projects they were working on before starting at WiseTech, and somehow it transformed into a comparison of various programming languages. But how can you compare programming languages? Fundamentally all languages that hobbyist and even professional software developers use have the same computational power. In fact, within the same programming paradigm all languages have more or less equivalent constructs and keywords that allow programs to be seamlessly translated between them. I argued, the real discussion to be had was about design and philosphy. Things like level of support, libraries, and expertise within a team are all important but are somewhat arbitrary across programming languages and what a dev finds mature, well-documented and easy to use is not inherently built into the language itself but is instead an artefact of marketing, culture and luck as the language is either eagerly adopted or silently neglected. In that sense it is impossible to discuss a langauge seriously as a theoretical, bounded object in a vacuum, instead it is a dynamic, growing tool that shapes the world and the broader community of programmers that use it shape it in turn. Trying hard to stick to the first (rigid and uncompromising) model of a language does not give us many easy handles for making comparisons and reverse engineering use cases- but it does concede a few. And so we began to talk about opinionatedness.
 
 ### Zen of Python
 
-![Import this](/assets/img/import_this.png)
+![Import this](https://imgur.com/Vi9dat3.png)
 
 > "Python is an opinionated language"
 

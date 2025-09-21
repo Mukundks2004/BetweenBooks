@@ -5,7 +5,7 @@ date: 2025-04-11 16:00:00 +1000
 categories: [Misc]
 tags: [society,culture,society-and-culture,sydney,maccas]
 image:
-    path: /assets/img/qvb_maccas_background.png
+    path: https://imgur.com/JIEsXvb.png
 ---
 
 > You are just as much a part of the universe as a black hole, or a supernova
@@ -33,7 +33,7 @@ Everyone has their own unique experience and relationship with the THM, and you'
 
 ## The Central Tunnel
 
-![Central tunnel](/assets/img/central_tunnel.png)
+![Central tunnel](https://imgur.com/B9RJ1BB.png)
 
 One other really fascinating example of "being a living part of Sydney" is busking in the tunnels. Yeah it is a bit shady and there are often people experiencing homelessness there- in fact, most buskers probably aren't busking, but just begging for money which is really sad :(- but that tunnel (which I just learnt is called the Devonshire Street Tunnel) is universally known by all Sydneysiders. We've all walked there, probably run through there at some point and even seen someone we knew there going the other way. Especially UTS students. I know it has negative connotations and I really don't mean to idealize or romanticize what homeless people experience. Singing to the public in that tunnel to me means the same as an overworked underpayed teen doing the night shift at the THM, they're contributing to the shared experience of a place we've all been to and had not just exciting, but mundane experiences in.
 

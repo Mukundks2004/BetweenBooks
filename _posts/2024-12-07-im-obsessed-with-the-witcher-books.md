@@ -5,13 +5,13 @@ date: 2024-12-08 14:00:00 +1100
 categories: [Books Film and Music]
 tags: [witcher,review,book,geralt-of-rivia,sapkowski]
 image:
-    path: /assets/img/witcher_background.jpg
+    path: https://i.postimg.cc/zBVKHyK2/witcher-background.webp
 ---
 
 > Major spoilers ahead.
 {: .prompt-danger }
 
-**Everyone** has heard of *The Witcher*. 
+**Everyone** has heard of *The Witcher*.
 
 An immensely successful multimedia franchise, *The Witcher* flourishes on every platform it is featured on. Andrzej Sapkowski brought *The Witcher* into this world through a short story written for a Polish fiction magazine in the 80s, after which he continued producing short stories, then novels into the 90s and 00s when CD Projekt recreated *The Witcher* in the digital space by producing the Witcher games. The games were massive hits. *The Witcher III*, released in 2015, is considered one of the greatest video games of all time. Netflix released *The Witcher* as a TV series in 2019, and although this wasn't the first version adapted for the screen, it was by far the most consumed, the most well-known, and the best received (until recently, but we're not here to talk about that). So yeah, Geralt's done well. With a new Witcher book only recently released (in Polish, not English yet) there's no better time to exalt the series. If it wasn't clear already, it's about the best-written series I've ever read.
 

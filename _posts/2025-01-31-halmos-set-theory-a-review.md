@@ -5,7 +5,7 @@ date: 2025-01-31 13:30:00 +1100
 categories: [Books Film and Music]
 tags: [maths,review,set-theory,book,halmos,pedagogy]
 image:
-    path: /assets/img/principia.png
+    path: https://imgur.com/pvqXHVA.png
 ---
 
 Recently my grandparents visited from overseas, and they brought with them a treasure trove of literary and mathematical wonders. The thinnest and most approachable of these was the humble but classic *Set Theory* by Paul R Halmos.
@@ -16,7 +16,7 @@ It is a truth universally acknowledged that a single man after completing a good
 
 One of the first things users are confronted with when reading this text is the decision to accept this text as either a naive or axiomatic one. Naive set theory as a discipline refers to the set theory that we are taught in early undergrad- it delineates an informal approach to sets, often relying heavily on intuition and natural language rather than formal statements. Axiomatic set theory on the other hand is defined by its rigorous structure and definitions of the fundamental axioms that constitute set theory, such as the the axiom of extensionality, the axiom of pairing and the axiom of the empty set. The text appears not to leave any room for confusion or misinterpretaion, making clear the intentions of the author in the title itself. However, when turning to the very contents page of the book most readers (myself included) are confronted by chapters bearing names prefixed by "The Axiom of".
 
-![Contents](/assets/img/set_theory_contents.png)
+![Contents](https://imgur.com/efPsKuh.png)
 
 In fact, this confusion is only worsened by the author's attempt at clarifying this inconsistency. He says in the preface:
 
@@ -69,7 +69,7 @@ Don't forget, this formalization requirement was only produced as a means to an 
 
 ## No Examples
 
-Back to something easier to explain: one of my biggest qualms with this book is its abject lack of examples. Set theory is one of the most concrete, least abstract fields of math out there. Yet for some reason Halmos produced hardly any examples of the often complex and difficult theorems and lemmas, leaving me to struggle for hours and eventually consult math exchange. Oh how much time I could have saved had Halmos had the humility to stoop down from his throne of abstraction and theory to give me, the starving peasant, a simple single set that would have satisfied his previous definition. Call it retaining purity, call it a skill issue on my part, but modern books are often constructed around ease of use and are saturated with both worked answers and more hands off examples and Halmos definitely was conservative in this regard. Even though it was probably fine for the 1960s that shit would not fly today. *All I ask for is one example of a family Halmos! It's all I ask for!*. I feel like it's especially big talk coming from a guy who supposedly said this: ![Halmos Quote](/assets/img/halmos_quote.png) (can access it [here](https://books.google.it/books?id=7VblBwAAQBAJ&pg=PA63#v=onepage&q&f=false)) An old boss of mine swore by the zone of proximal development, and I have hardly felt it more relevant than here. "The whole book is an exercise" stfu Paul, let us walk before we run.
+Back to something easier to explain: one of my biggest qualms with this book is its abject lack of examples. Set theory is one of the most concrete, least abstract fields of math out there. Yet for some reason Halmos produced hardly any examples of the often complex and difficult theorems and lemmas, leaving me to struggle for hours and eventually consult math exchange. Oh how much time I could have saved had Halmos had the humility to stoop down from his throne of abstraction and theory to give me, the starving peasant, a simple single set that would have satisfied his previous definition. Call it retaining purity, call it a skill issue on my part, but modern books are often constructed around ease of use and are saturated with both worked answers and more hands off examples and Halmos definitely was conservative in this regard. Even though it was probably fine for the 1960s that shit would not fly today. *All I ask for is one example of a family Halmos! It's all I ask for!*. I feel like it's especially big talk coming from a guy who supposedly said this: ![Halmos Quote](https://imgur.com/jJ9Vu3R.png) (can access it [here](https://books.google.it/books?id=7VblBwAAQBAJ&pg=PA63#v=onepage&q&f=false)) An old boss of mine swore by the zone of proximal development, and I have hardly felt it more relevant than here. "The whole book is an exercise" stfu Paul, let us walk before we run.
 
 ## Bite Sized Chapters
 
