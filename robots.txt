@@ -1,5 +1,0 @@
-User-agent: *
-
-Disallow: /norobots/
-
-Sitemap: https://mukundks2004.github.io/BetweenBooks/sitemap.xml
