@@ -1,5 +1,5 @@
 ---
-title: The Only Real Character in The Greatest Sitcom Ever
+title: The Only Real Character in The Greatest Sitcom Of All Time
 date: 2025-09-21 17:00:00 +1000
 
 categories: [Books Film and Music]
