@@ -1,5 +1,5 @@
 ---
-title: Lessons Learnt at Roseworthy
+title: Lessons Learnt At Roseworthy
 date: 2025-03-31 14:20:00 +1030
 
 categories: [University]
