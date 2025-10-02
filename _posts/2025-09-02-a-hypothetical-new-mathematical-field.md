@@ -12,7 +12,7 @@ I am not a mathematician by trade but I have always enjoyed maths as a hobby, an
 
 ## Background and Motivation
 
-In computer science, perhaps the most famous algorithm studied by all undergraduate students is Dikstra's algorithm. Named after scientist Edsger Dijkstra, it is a shockingly simple solution to the Single Source Shortest Path (SSSP) problem prevalent in the real world.
+In computer science, perhaps the most famous algorithm studied by all undergraduate students is Dijkstra's algorithm. Named after scientist Edsger Dijkstra, it is a shockingly simple solution to the Single Source Shortest Path (SSSP) problem prevalent in the real world.
 
 Algorithms can be measured and compared using a method call complexity analysis. The resources an algorithm can use are time and memory (space) so we have time complexity and space complexity correspondingly. These measures do not have a standard unit e.g. metres or seconds. Complexity is determined by how the running time/space scales relative to the size of the input. If running time scales linearly relative to input size, we call it 'linear time'. If output scales quadratically realtive to input we call the algorithmic complexity 'quadratic'. If output is constant relative to input time we call it constant time. I imagine it is more 'accurate' to measure algorithmic efficiency by counting discrete steps or instructions- perhaps modelled by an algebraic object, rather than this imprecise notion of 'complexity'. But we’ll stay with time complexity for now. Returning to Dijkstra- strange news was doing rounds on linkedin only a few months ago. This longstanding giant was beaten! A new algorithm, also solving SSSP, was published with a lower time complexity.
 
