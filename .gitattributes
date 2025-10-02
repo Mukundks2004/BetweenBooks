@@ -14,3 +14,6 @@
 *.png binary
 *.jpg binary
 *.ico binary
+
+# Mark markdown files as linguist-detectable for GitHub language statistics
+*.md linguist-detectable
