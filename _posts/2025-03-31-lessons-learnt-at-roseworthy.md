@@ -3,7 +3,7 @@ title: Lessons Learnt At Roseworthy
 date: 2025-03-31 14:20:00 +1030
 
 categories: [University]
-tags: [robotics,university,rover,adelaide,short-story,reflection,recount]
+tags: [robotics,university,rover,adelaide,short-story,reflection,recount,chat-gpt]
 image:
     path: https://imgur.com/SQkULwx.png
 ---
