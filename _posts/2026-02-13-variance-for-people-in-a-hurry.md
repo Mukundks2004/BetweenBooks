@@ -70,7 +70,7 @@ Exercise for the reader: explain, with code examples, why this code compiles.
 
 What is an example of a type constructor that is contravariant? The `Action<T>` delegate. This code compiles:
 ```cs
-Action<Dog> a = (x) => new Dog();
+Action<Dog> a = (x) => {};
 Action<Poodle> b = a;
 ```
 Exercise for the reader: explain, with code examples, why this code compiles.
