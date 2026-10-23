@@ -5,7 +5,7 @@ date: 2026-02-13 17:30:00 +1100
 categories: [Technical]
 tags: [csharp,programming,maths,set-theory,variance,generics]
 image:
-    path: https://www.gcis.co.uk/wp-content/uploads/2021/01/statistics-graph-illustration.jpg
+    path: https://cdn.britannica.com/63/131163-050-34ADE55B/coloration-patterning-phenotypes.jpg
 ---
 
 In 2024 I wrote [my first post on this blog](https://mukundks2004.github.io/BetweenBooks/posts/what-is-the-co-in-covariant/), on variance. Rereading it I think there is much that can be improved and the whole thing can be shortened, so here it is.
