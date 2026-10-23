@@ -33,7 +33,7 @@ You could say I came for your classes but stayed for your structure. The balance
 ![Hungarian folk dancing (at this point we were just having fun)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFJIg-2GObaiPdrdXeiJvVlRq9MeCeNLhq86NNm8VUHRSRhqZ7wdPjNobI&s=10)
 *Hungarian folk dancing (at this point we were just having fun)*
 
-As a Sydneysider, I was fascinated by the concept of a uni town. Where a campus spread is spread across the town that students live and study in and around. Every day I had about 5-6 hours of free time which I spent with my friends visiting pubs, going on walks, playing volleyball, chess, and cards, and exploring your city. There was enough time to party, recover, party again and still sleep 8 hours. It was an awesome change of pace from my daily grind!
+As a Sydneysider, I was fascinated by the concept of a uni town, where a campus spread is spread across the town that students live and study in and around. Every day I had about 5-6 hours of free time which I spent with my friends visiting pubs, going on walks, playing volleyball, chess, and cards, and exploring your city. There was enough time to party, recover, party again and still sleep 8 hours. It was an awesome change of pace from my daily grind!
 
 ## Classroom Content
 
