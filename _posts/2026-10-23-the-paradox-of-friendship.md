@@ -52,27 +52,27 @@ In a sentence, you want to get the 'time' part of 'time, trust, and presence' fo
 
 ## The Irony
 
-And this is where the irony is. Because the moment the friendship is strong enough to support itself, when it has the momentum to leave the place it started, the onus is on YOU to make it fun[^footnote2].
+And this is where the irony is. Because the moment the friendship is strong enough to support itself, when it has the momentum to leave the place it started, the onus is on YOU to be happy with it[^footnote2].
 
 [^footnote2]: The optimist might say that I am looking at this backwards, that you have to find someone you have fun with first and then you get this (momentum to start hanging out and doing things) for free and don't have to think so hard about it. To them, the place you meet people is nothing more than an opportunity, and they might not give it as much importance as I have. But I think I'm being realistic- not sharing an ugly truth but just a truth. We code switch and behave differently around different people and until you find the right part of you that clicks with another person (if there is a part that does at all) you have to rely on this familiarity-based approach, which is more algorithmic and less intuitive rather than than hitting it off and becoming best friends right then and there. The former is completely valid, by the way, not at all inferior to the intuitive method which has its own shortcomings- namely the aforementioned honeymoon phase and secondly falling into the trap of acting buddy buddy without feeling anything.
 
 It is almost a moment of vulnerability, to acknowledge that you like the other person/people so much that you are willing to, for the first time, sink your actual free time into being with them. It is no longer you and them vs the environment, the common uniting factor is gone. And this is wildly more expensive, because we only have so much free time, especially as we get older. There is way more pressure on you to enjoy what you choose to do to justify continuing to invest in this friendship. This is why so many friendships die when people leave.
 
-An inwards pressure is exerted while you are at school or sport or wherever, bringing you closer, and an outwards pressure is exerted if your friendship exists outside that place, costing you time and energy. So pessimistically, every time you make a friend they come with a timer ticking down till the day the thing that keeps you together ends.
+An attractive force is exerted while you are at school or sport or wherever, bringing you closer, and a repulsive force is exerted when you take your friendship outside that place, costing you time and energy. It is easier to be friends while your friendship is secondary to some other thing than it is to just be friends. So pessimistically, every time you make a friend they come with a timer ticking down till the day the thing that keeps you together ends.
 
 ## The Takeaway
 
 Use this system to your advantage.
 
-To form a group you "only" need to put yourself in a situation where you are incidentally seeing the same group of people again and again. Framed this way it isn't so revolutionary, it circles back to advice we hear all the time- do things where you see the same people again and again. Sure it won't be free but it will be inexpensive if you enjoy that thing anyway.
+To form a group you "only" need to put yourself in a situation where you are incidentally seeing the same group of people again and again. Framed this way it isn't so revolutionary, it circles back to advice we hear all the time- do things where you see the same people again and again. Sure the time cost won't be zero but it will be low if you enjoy that thing anyway.
 
 The less energy required to be present the better, so roommates (like college dormmates) is best. This is followed by a low stakes minimum wage job. Oddly when the job becomes a higher stakes 9-5 and people get older, despite putting more hours in they also take it more seriously and this effect is weakened. And the gym would be next, which is the most obligatory hobby you can have imo. For a lot of people it isn't something they enjoy but something they do out of discipline, which means they will commit to it in a predictable way. This sets it apart from hobbies that are more high maintenance which makes them more susceptable to variation in people's routines.
 
 ## Conclusion
 
-Whether you agree with the irony or not, you must concede that you need to meet people to make friends. So bottom line, put yourself out there and try new things. Maybe your experiences will be different to mine.
+Whether you agree with the irony or not, you must concede that you need to meet people to make friends. So bottom line, put yourself out there and try new things. Maybe your experiences will be different to mine[^footnote3].
 
-If the theory turns out to be accurate[^footnote3] and more times than not these friendships reach their expiry, so be it. Tis better to have loved and lost than never to have loved at all.
+If the theory turns out to be accurate and more times than not these friendships reach their expiry, so be it. Tis better to have loved and lost than never to have loved at all.
 
 ![Friends](https://images.squarespace-cdn.com/content/v1/537cad0be4b02cb9fe04985f/1430588288517-OK1QZNNSTDOSWAL19SQU/Friends.jpg)
 
