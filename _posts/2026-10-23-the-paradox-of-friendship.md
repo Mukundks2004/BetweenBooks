@@ -1,5 +1,5 @@
 ---
-title: "The Paradox of Friendship: A Working Theory"
+title: "The Paradox of Friendship"
 date: 2026-10-20 1:30:00 +1100
 
 categories: [Misc]
@@ -72,6 +72,6 @@ The less energy required to be present the better, so roommates (like college do
 
 Whether you agree with the paradox or not, you must concede that you need to meet people to make friends. So bottom line, put yourself out there and try new things. Maybe your experiences will be different to mine.
 
-If the theory turns out to be accurate and more times than not these friendships reach their expiry, so be it. Tis better to have loved and lost than never to have loved at all[footnote3].
+If the theory turns out to be accurate and more times than not these friendships reach their expiry, so be it. Tis better to have loved and lost than never to have loved at all[^footnote3].
 
 [^footnote3]: There was a hole in this discussion, which is my high school friend group. My closest friend group is one that is not united by an ongoing activity! Well, it is complicated. I think everyone is entitled to one "exception" friend group because we are social creatures and need one friend group to survive. I think the case where a group of people collectively have no social presence and end up meeting can circumvent the whole argument I made and become a friend group. Put in non diplomatic terms, because they are all equally desperate. Someone could join an existig friend group the same way. Also, my school group overlaps with my uni group, and I am closer to the friends I see at uni. So it's a bit too messy to try to explain this one out.
