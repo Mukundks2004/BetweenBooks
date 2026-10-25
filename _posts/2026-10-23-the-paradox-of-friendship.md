@@ -1,6 +1,6 @@
 ---
 title: "The Irony of Friendship"
-date: 2026-10-20 1:30:00 +1100
+date: 2026-10-23 10:30:00 +1100
 
 categories: [Misc]
 tags: [friends,friendship,irony,paradox,social-commentary]
