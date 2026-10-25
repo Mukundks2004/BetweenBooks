@@ -14,7 +14,7 @@ I am a student at UTS, that was lucky enough to attend you in July this year.
 
 I enjoyed my time in your city and it's hard to believe I was only there for a few weeks when that experience felt so formative and memorable. I have many things to say to you and I regret not having written them down in depth in the feedback form. I hope this written testimonial will partially make up for that and that my feedback will benefit you, or at the very least provide encouragement and thanks to your team.
 
-![(Half of?) My class having ice cream after dinner](https://media.discordapp.net/attachments/692941050385399820/1563057910202761331/IMG-20260718-WA0003.jpg?ex=6adc3e9e&is=6adaed1e&hm=56822106729ac14afb1ed104df13a17c7cc1a897002a036af2d79111eeaf5cd7&=&format=webp)
+![(Half of?) My class having ice cream after dinner](https://i.imgur.com/DomAHh0.png)
 *(Most of?) My class having ice cream after dinner*
 
 ## Structure
