@@ -24,3 +24,31 @@ Analysis of the whole thing is unnatural, like looking into my soul. Every song 
 
 didnt want to do it. but ultimately curiosity got the best of me. Lets see what trends we can identify.
 
+Talk about history:
+- first week
+- golden age of sharing and high maintenance + rules, ending in german theme
+- striking it out and going solo
+- losing my streak
+- abandoning it 
+- this sustainable model (fewer rules, only soft rule is dont have the same song twice that andrew breaks a lot)
+
+Some queries to run:
+- number of days we have had sotd and number of days we have not
+- largest number of days a streak was maintained
+- total number of sotd (multiple links counted separately)
+- total number of artists (deduplicated)
+- top 5 artist with most songs (remember old days we had the rule)
+- top 5 posters by number of entried
+- graph of posts per month in terms of links and posts per month in terms of days per month and messages per month
+- hour by hour, most common hours to have sotd- any hours without songs?
+- most number of times a song has been submitted as sotd
+- shortest song
+- longest song
+- song with most genres
+- song with most reactions
+- day with most messages
+
+- distribution of lana del rey songs
+- distribution of twice songs
+
+- distribution of genres per month for me
