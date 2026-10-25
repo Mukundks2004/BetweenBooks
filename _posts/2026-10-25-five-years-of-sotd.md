@@ -47,8 +47,14 @@ Some queries to run:
 - song with most genres
 - song with most reactions
 - day with most messages
+- artist with longest gap between first and last posted date
+- most covers of a song (songs with the same name)
+- artist breakdown by starting letter
+- song breakdown by starting letter
+- shortest, longest, median artist and song name length
 
 - distribution of lana del rey songs
 - distribution of twice songs
+
 
 - distribution of genres per month for me
