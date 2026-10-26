@@ -8,7 +8,7 @@ image:
     path: https://cdn.britannica.com/63/131163-050-34ADE55B/coloration-patterning-phenotypes.jpg
 ---
 
-In 2024 I wrote [my first post on this blog](https://mukundks2004.github.io/BetweenBooks/posts/what-is-the-co-in-covariant/), on variance. Rereading it I think there is much that can be improved and the whole thing can be shortened, so here it is.
+In 2024 I wrote [my first post on this blog](https://mukunds.blog/posts/what-is-the-co-in-covariant/), on variance. Rereading it I think there is much that can be improved and the whole thing can be shortened, so here it is.
 
 ## Requirements
 
