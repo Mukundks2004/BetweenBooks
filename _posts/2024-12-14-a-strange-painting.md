@@ -2,8 +2,8 @@
 title: Nightmare Tree
 date: 2024-12-14 23:00:00 +1100
 
-categories: [Misc]
-tags: [philosophy,ramble,tree,painting,eerie,reflection]
+categories: [Reflective]
+tags: [philosophy,ramble,tree,painting,eerie,reflection,xkcd]
 image:
     path: https://imgur.com/DvFAPZi.jpeg
 ---
