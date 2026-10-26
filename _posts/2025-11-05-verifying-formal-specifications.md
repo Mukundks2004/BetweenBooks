@@ -2,7 +2,7 @@
 title: "Type Theory Part III: Verifying Formal Specifications"
 date: 2025-11-05 20:30:00 +1100
 
-categories: [Technical]
+categories: [Technical, Type Theory]
 tags: [lean,programming,maths,computer-science,technical,type-theory,leftpad,verification,formal-verification,formal-methods,proof]
 image:
     path: https://www.rmit.edu.au/content/dam/rmit/au/en/study-with-us-orderable/seo-info-pages/how-to-become/engineering/how-to-become-an-engineer-main-image-1220x732.jpg

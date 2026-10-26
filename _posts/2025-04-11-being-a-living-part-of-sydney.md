@@ -2,7 +2,7 @@
 title: Being a Living Part of Sydney
 date: 2025-04-11 16:00:00 +1000
 
-categories: [Misc]
+categories: [Reflective]
 tags: [society,culture,society-and-culture,sydney,maccas]
 image:
     path: https://imgur.com/JIEsXvb.png

@@ -2,7 +2,7 @@
 title: "Type Theory Part II: Proving Natural Addition Commutes from First Principles"
 date: 2025-09-20 01:00:00 +1000
 
-categories: [Technical]
+categories: [Technical, Type Theory]
 tags: [lean,maths,computer-science,technical,type-theory,set-theory,peano,programming]
 image:
     path: https://imgur.com/eN0OTLQ.jpeg

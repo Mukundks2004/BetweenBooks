@@ -3,7 +3,7 @@ title: "Halmos' Set Theory: a Review"
 date: 2025-01-31 13:30:00 +1100
 
 categories: [Books Film and Music]
-tags: [maths,review,set-theory,book,halmos,pedagogy]
+tags: [maths,review,set-theory,book,halmos,pedagogy,logic]
 image:
     path: https://imgur.com/pvqXHVA.png
 ---

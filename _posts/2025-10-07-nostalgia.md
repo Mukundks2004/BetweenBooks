@@ -2,7 +2,7 @@
 title: Nostalgia
 date: 2025-10-07 17:00:00 +1100
 
-categories: [Misc]
+categories: [Reflective]
 tags: [nostalgia,spotify,spotify-wrapped,short,shower-thought]
 image:
     path: https://binaries.pirelli.com/2023/12/06/162314307-1fbffcbb-73e9-4d7a-85a7-08ac6713f574.jpg

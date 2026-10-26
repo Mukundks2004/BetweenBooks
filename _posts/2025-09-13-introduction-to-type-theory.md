@@ -2,7 +2,7 @@
 title: "Type Theory Part I: Introduction to Type Theory"
 date: 2025-09-13 01:00:00 +1000
 
-categories: [Technical]
+categories: [Technical, Type Theory]
 tags: [maths,computer-science,technical,type-theory,category-theory,haskell,idris,programming,godel-escher-bach,philosophy,philosophy-of-meaning,tcs,dependent-typing,set-theory]
 image:
     path: https://imgur.com/Gk8qBk4.png

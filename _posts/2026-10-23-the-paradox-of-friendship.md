@@ -2,7 +2,7 @@
 title: "The Irony of Friendship"
 date: 2026-10-20 1:30:00 +1100
 
-categories: [Misc]
+categories: [Reflective]
 tags: [friends,friendship,irony,paradox,social-commentary]
 image:
     path: "https://r2blog.com/wp-content/uploads/2010/07/m-c-eschers-drawing-hands.jpg"
