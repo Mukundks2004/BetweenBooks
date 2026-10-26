@@ -8,10 +8,10 @@ image:
     path: https://i.postimg.cc/7hzzXjBg/programming-background.avif
 ---
 
-Yesterday at work, a friend and I were having a conversation about a strange C# syntactic feature- something he saw in the codebase that he didn't understand. The discussion went as follows
+Yesterday, a coworker and I were having a conversation about a strange C# syntactic feature- something he saw in the codebase that he didn't understand. The discussion went as follows:
 
-**Friend**: *You always talk about language quirks, I saw this weird syntax in some dotnet code*\
-**Me**: *Huh, what did you see*\
+**Friend**: *You always talk about language quirks, I saw this weird syntax in some .NET code*\
+**Me**: *Huh? what did you see?*\
 **Friend**: *Well, you know interfaces right?*\
 **Me**: *Yeah*\
 **Friend**: *It was an interface generic, but those aren't too rare. It was weird because it had a modifier **inside** the generic- "new" or "into" or some blue text like that*\
@@ -30,11 +30,11 @@ One of the tricky things about learning variance is justifying the 'co' and 'con
 
 A functor $$F$$ is a mapping between categories, $$F: C \to D$$. It assigns each objext $$X$$ in $$C$$ an $$F(X)$$ in $$D$$ and each $$f: X \to Y$$ in $$C$$ an $$F(f): F(X) \to F(Y)$$ in $$D$$. Identity morphisms are preserved under $$F$$ and $$F$$ respects composition of morphisms, that is, composing $$f$$ and $$g$$ and then applying $$F$$ yields the same result as composing $$F(f)$$ and $$F(g)$$.
 
-When a functor preserves the direction of morphisms- that is, any old functor- we call it covariant. Functors are covariant by default. Sometimes, a functor behaves in the way described above, except for the fact that it reverses the direction of morphisms. We still call this a functor, but assign it the adjective "contravariant" as indication of this special distinction.
+When a functor preserves the direction of morphisms- that is, any old functor- we call it covariant. Functors are covariant by default. Sometimes, a functor behaves in the way described above, except for the fact that it reverses the direction of morphisms. We still call this a functor, but assign it the adjective "contravariant" to indicate this special distinction.
 
-## Definitions Out of the Way, On to Some Programming!
+## Definitions out of the Way, on to Some Programming!
 
-Similar to $$Hask$$, we can construct $$Type$$, the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`.
+Similar to $$Hask$$, we can construct $$Type$$; the category of reference types in a polymorphic OO language. Let a morphism from $$A$$ to $$B$$ exist if $$A$$ is a subtype of $$B$$. Recognize that the "one or none"-ness of the class of morphisms between objects makes the category "posetal" in a sense, as there is a partial ordering of objects in the category. Note that the sybtype ordering on $$Type$$ is not a total ordering, as the object `Cat` bears no relation to `Dog`.
 
 > Side note: technically morphisms aren't present strictly if `A` is a subtype of `B` but rather if a reference of type `B` is able to point to an object of type `A`. Practically, the latter is a generalization of the former since it allows for method group assignment (method groups are typeless), delegate variance, etc.
 
@@ -48,7 +48,7 @@ Take our faithful `List<T>` from C#. It takes little effort to see that `List<T>
 
 Back to `List`. Our functor is not complete without a rigorous description of what it does to our morphisms- but I want to pose that to you first. How does `List` act on any particular subtype relation?
 
-Well those of you with little C# experience might foolishly call out "It preserves the morphisms! It preserves the morphisms!". While I admire your eagerness, you would be wrong. Despite its tremendous banality, I have to pull out a textbook example to demonstrate your error. It's your fault really, for making such a simple one.
+Well those of you with little C# experience might foolishly call out "It preserves the morphisms! It preserves the morphisms!" While I admire your eagerness, you would be wrong. Despite its tremendous banality, I have to pull out a textbook example to demonstrate your error. It's your fault, really, for making such a simple one.
 
 ## Consider the Following:
 
@@ -86,7 +86,7 @@ IEnumerable<Dog> dogs = new List<Dog>();
 IEnumerable<Animal> animals = dogs;
 ```
 
-The above snippet compiles. And in fact, it is widely recognized that `IEnumerable<out T>` is covariant to allow this functionality. Not only is it "out-only" (we can get things out of it but not write to it), but has been marked as such using the `out` modifier, asking the compiler to verify this property to tag the interface as covariant. Now we can understand the full meaning of the word, applying the `IEnumerable<T>` functor to $$Type$$ associates every type with a new one, preserving the morphisms between types after the transformation.
+The above snippet compiles. And in fact, it is widely recognized that `IEnumerable<out T>` is covariant to allow this functionality. Not only is it "out-only" (we can get things out of it but not write to it), but has been marked as such using the `out` modifier, asking the compiler to verify this property to tag the interface as covariant. Now we can understand the full meaning of the word, applying the `IEnumerable<T>` functor to $$Type$$ associates every type `T` with `IEnumerable<T>`, preserving the morphisms between types after the transformation.
 
 ## And For Completeness, Contravariance?
 
@@ -100,17 +100,17 @@ Action<Animal> animalAction = (animal) => {};
 Action<Dog> dogAction = animalAction;
 ```
 
-We've... reversed the order of morphisms? Reversed the inheritance chain?? Oh god, what have we done! Jeff Goldblum was right all along!
+We've... reversed the order of morphisms? Reversed the inheritance chain?? Oh god, what have we done!? Jeff Goldblum was right all along!
 
 ![Just because you can does not mean you should](https://imgur.com/Lq3tybA.png)
 
 ## Calm Down!
 
-It starts to make sense when you analyze it logically. `animalAction` depends on an `Animal`. By pointing to it using a reference of type `Action<Dog>` you are simply promising that if you ever invoke it, you will provide it with a `Dog`, an acceptable substitute for an `Animal`. Now the definition of morphisms existing "if a reference of type `B` is able to point to an object of type `A`" makes more sense. Of course, all of this breaks down if `Action` is able to return `T` too, but thankfully that won't happen soon. And if it does, the compiler will be the first to complain!
+It starts to make sense when you analyze it logically. `animalAction` depends on an `Animal`. By pointing to it using a reference of type `Action<Dog>` you are simply promising that if you ever invoke it, you will provide it with a `Dog`, an acceptable substitute for an `Animal`. Now the definition of morphisms existing "if a reference of type `B` is able to point to an object of type `A`" makes more sense. Of course, all of this breaks down if `Action` is able to return `T` too, but thankfully that won't happen anytime soon. And if it does, the compiler will be the first to complain!
 
 ## Bivariance
 
-The last type of variance is bivariance, a functor that both preserves an original morphism and creates a corresponding and equal but otherwised reversed morphism in the destination category is bivariant. We know covariance can only be established by making our type out-only and contravariance by making our type in-only, so bivariance would need to meet both these conditions, and neither take nor return `T`, ever. And believe it or not, the maths checks out. Such a type would both preserve the morphism from `I<Dog>` to `I<Animal>` and also create a reversed morphism, from `I<Animal>` to `I<Dog>`. In such a bizarre case, the generic isn't even being used (it neither takes nor returns `T`!), making the references interchangeable and thus the distinction totally useless. From a maths perspective, in a partial order, $$a \le b$$ and $$b \le a$$ implies $$a = b$$ (we call this antisymmetry). And so it is, as the types have become equivalent! From a software engineering perspective, I can't imagine ever needing this. Neither can the compiler as it won't let you have both, so bivariance is more of a theoretical concept.
+The last type of variance is bivariance, a functor that both preserves an original morphism and creates a corresponding and equal but otherwised reversed morphism in the destination category is bivariant. We know covariance can only be established by making our type out-only and contravariance by making our type in-only, so bivariance would need to meet both these conditions, and neither take nor return `T`, ever. And believe it or not, the maths checks out. Such a type would both preserve the morphism from `I<Dog>` to `I<Animal>` and also create a reversed morphism, from `I<Animal>` to `I<Dog>`. In such a bizarre case, the generic isn't even being used (it neither takes nor returns `T`!), making the references interchangeable and thus the distinction totally useless. From a maths perspective, in a partial order, $$a \le b$$ and $$b \le a$$ implies $$a = b$$ (we call this antisymmetry). And so it is, the types have become equivalent! From a software engineering perspective, I can't imagine ever needing this. Neither can the compiler as it won't let you have both, so bivariance is more of a theoretical concept.
 
 ## What Next?
 
