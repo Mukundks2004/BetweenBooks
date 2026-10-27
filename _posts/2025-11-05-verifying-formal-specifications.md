@@ -11,7 +11,7 @@ image:
 > All the code snippets in this article are compiled into a fully working proof accessible [here](https://github.com/Mukundks2004/leftpad)
 {: .prompt-info }
 
-> You can read Part II [here](https://mukundks2004.github.io/BetweenBooks/posts/proving-natural-addition-commutes-from-first-principles/)
+> You can read Part II [here](https://mukunds.blog/posts/proving-natural-addition-commutes-from-first-principles/)
 {: .prompt-info }
 
 
