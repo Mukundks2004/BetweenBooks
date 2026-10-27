@@ -2,7 +2,7 @@
 title: On Design and Normativity
 date: 2025-09-12 12:30:00 +1000
 
-categories: [Misc]
+categories: [Reflective]
 tags: [society,programming,python]
 image:
     path: https://imgur.com/ZNdwYOK.jpeg

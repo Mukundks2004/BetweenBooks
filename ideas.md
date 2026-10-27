@@ -1,3 +1,18 @@
+# TODOs
+
+- add pic of mim ouraborous
+- add pic of rover to roseworthy
+
+## Articles
+
+- chess Markov chain for real life, forcing people into an option, every person is a chess engine
+- there is a sweet spot between not wanting to do something and being in a frenzy
+  - at work people burning out because every weekend
+  - sometimes people not motivated
+  - how can you like something but not like it too much?
+  - talk about electronics, slowly improving my program
+  - some peoples sustained pace is faster or slower than mine
+
 # Things I can blog about
 
 - UTS vs UNSW vs USYD comp Sci + choosing a uni, factors to consider, my experiences
