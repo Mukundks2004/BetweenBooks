@@ -19,7 +19,7 @@ title: "Mukund's Blog" # the main title
 tagline: "What Am I Thinking About?" # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Reviews, reflections, stories, and expositions
+  Come read my reviews, reflections, recounts, and stories
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -102,7 +102,7 @@ avatar: "./avatar.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: "https://cdnb.artstation.com/p/assets/images/images/089/957/619/large/alesia-halota-1.jpg?1752479962"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
