@@ -16,10 +16,10 @@ timezone: Australia/Sydney
 
 title: "Mukund's Blog" # the main title
 
-tagline: Writings and Ramblings # it will display as the subtitle
+tagline: "What Am I Thinking About?" # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Writings of a UTS Computer Science Student and Software Cadet
+  Reviews, reflections, stories, and expositions
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -28,21 +28,21 @@ url: "https://mukunds.blog"
 github:
   username: Mukundks2004 # change to your GitHub username
 
-twitter:
-  username: InquisitorMks # change to your Twitter username
+# twitter:
+#  username: InquisitorMks # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Mukund Srinivasan
-  email: inquisitormks@gmail.com # change to your email address
+  email: mukundsrinivasan2@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://x.com/InquisitorMks # change to your Twitter homepage
+    # - https://x.com/InquisitorMks # change to your Twitter homepage
     - https://github.com/Mukundks2004 # change to your GitHub homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.facebook.com/share/1S5UxkkbvC/
+    - https://www.linkedin.com/in/mukund-srinivasan-300a99290/
 
 # Site Verification Settings
 webmaster_verifications:
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "./epic_face.png"
+avatar: "./avatar.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
